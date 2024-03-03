@@ -4,6 +4,10 @@
 
 #include "Snake.h"
 #include "Food.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <sstream>
 
 class Game{
 public:
@@ -11,6 +15,7 @@ public:
 	Food food = Food(snake.body);
 	bool running = true;
 	int score = 0;
+	int highScore = 0;
 
 	Sound eatSound;
 	Sound wallSound;
@@ -22,6 +27,8 @@ public:
 	void checkCollisionWithFood();
 	void checkCollisionWithEdges();
 	void checkCollisionWithTail();
+	void readHighScore();
+	void saveHighScore();
 	void GameOver();
 };
 

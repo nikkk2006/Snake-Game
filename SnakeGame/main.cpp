@@ -51,7 +51,12 @@ int main() {
 		ClearBackground(green);
 		DrawRectangleLinesEx(Rectangle{offset - 5, offset - 5, cellSize * cellCount + 10, cellSize * cellCount + 10 }, 5, darkGreen);
 		DrawText("Retro Snake", offset - 5, 20, 40, darkGreen);
-		DrawText(TextFormat("%i", game.score), offset - 5, offset + cellSize * cellCount + 10, 40, darkGreen);
+		DrawText(TextFormat("Score: %i", game.score), offset - 5, offset + cellSize * cellCount + 10, 40, darkGreen);
+
+		std::string strHighScore = std::to_string(game.highScore);
+		int scoreWidth = MeasureText(strHighScore.c_str(), 40);    // width of number
+		DrawText(strHighScore.c_str(), offset + cellSize * cellCount - scoreWidth + 5, offset + cellSize * cellCount + 10, 40, darkGreen);
+
 		game.Draw();
 
 		EndDrawing();

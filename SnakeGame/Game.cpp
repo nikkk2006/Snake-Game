@@ -5,6 +5,7 @@ Game::Game(){
 	InitAudioDevice();
 	eatSound = LoadSound("Sounds/eat.mp3");
 	wallSound = LoadSound("Sounds/wall.mp3");
+	readHighScore();
 }
 
 Game::~Game(){
@@ -58,10 +59,45 @@ void Game::checkCollisionWithTail(){
 	}
 }
 
+void Game::readHighScore(){
+	
+	std::ifstream inputFile("highScore.txt");
+
+	if (inputFile.is_open()) {
+		std::string strData;
+		int intValue;
+
+		std::getline(inputFile, strData);
+		std::stringstream ss(strData);
+		ss >> intValue;
+
+		if (intValue > highScore) {
+			highScore = intValue;
+		}
+
+		inputFile.close();
+	}
+}
+
+void Game::saveHighScore(){
+	std::ofstream outputFile("highScore.txt");
+
+	if (outputFile.is_open()) {
+		outputFile << highScore << std::endl;
+
+		outputFile.close();
+	}
+}
+
 void Game::GameOver(){
 	snake.Reset();
 	food.position = food.generateRandomPos(snake.body);
 	running = false;
+
+	if (score > highScore) {
+		highScore = score;
+		saveHighScore();
+	}
 	score = 0;
 	PlaySound(wallSound);
 }
