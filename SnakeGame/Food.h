@@ -5,6 +5,7 @@
 #include "raylib.h"
 #include <deque>
 #include "functions.h"
+#include <algorithm>
 
 
 extern const int cellSize;

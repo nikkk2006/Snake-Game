@@ -14,6 +14,8 @@ extern const int offset = 75;
 
 extern double lastUpdateTime = 0.0;
 
+const float speed = 0.15;
+
 
 int main() {
 
@@ -26,7 +28,7 @@ int main() {
 		BeginDrawing();
 
 		// Updating
-		if (eventTriggered(0.15)) {
+		if (eventTriggered(speed)) {
 			game.Update();
 		}
 
