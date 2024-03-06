@@ -6,6 +6,6 @@ buttonShop::buttonShop() : width(MyConstants::cellSize * 10), height(MyConstants
 }
 
 void buttonShop::Draw(){
-	DrawRectangleRec(button, buttonPressed ? WHITE : MyConstants::darkGreen);
+	DrawRectangleRounded(button, 0.5, 6, MyConstants::darkGreen);
 	DrawText(text, button.x + 110, button.y + 30, 30, BLACK);
 }

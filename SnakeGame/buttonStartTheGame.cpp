@@ -6,6 +6,6 @@ buttonStartTheGame::buttonStartTheGame() : width(MyConstants::cellSize * 10), he
 }
 
 void buttonStartTheGame::Draw(){
-	DrawRectangleRec(button, buttonPressed ? WHITE : MyConstants::darkGreen);
+	DrawRectangleRounded(button, 0.5, 6, MyConstants::darkGreen);
 	DrawText(text, button.x + 35, button.y + 30, 30, BLACK);
 }

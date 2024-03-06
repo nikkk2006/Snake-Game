@@ -5,6 +5,6 @@ buttonSettings::buttonSettings() : width(MyConstants::cellSize * 10), height(MyC
 }
 
 void buttonSettings::Draw(){
-	DrawRectangleRec(button, buttonPressed ? WHITE : MyConstants::darkGreen);
+	DrawRectangleRounded(button, 0.5, 6, MyConstants::darkGreen);
 	DrawText(text, button.x + 90, button.y + 30, 30, BLACK);
 }

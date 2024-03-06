@@ -62,6 +62,10 @@ bool mainMenu::Update(){
 
 void mainMenu::Draw(){
 	ClearBackground(MyConstants::green);
+	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
+	static_cast<float>(5),
+	static_cast<float>(screenWidth - 10),
+	static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 	DrawText("Snake Game", MyConstants::cellSize * 4, 10, 40, MyConstants::darkGreen);
 	buttonStart.Draw();
 	buttonShop.Draw();
