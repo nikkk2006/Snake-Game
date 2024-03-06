@@ -17,4 +17,8 @@ void MainDifficultWindow::Update(){
 void MainDifficultWindow::Draw(){
 	ClearBackground(MyConstants::green);
 	DrawText("choose the difficult", MyConstants::cellSize * 3.5, 10, 40, MyConstants::darkGreen);
+
+	easyDifficult.Draw();
+	mediumDifficult.Draw();
+	hardDifficult.Draw();
 }

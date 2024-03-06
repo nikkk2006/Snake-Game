@@ -3,6 +3,9 @@
 
 
 #include "constants.h"
+#include "ButtonEasyDifficult.h"
+#include "ButtonMediumDifficult.h"
+#include "ButtonHardDifficult.h"
 
 class MainDifficultWindow {
 public:
@@ -11,6 +14,9 @@ public:
 	const char* title;
 
 	// Buttons
+	ButtonEasyDifficult easyDifficult;
+	ButtonMediumDifficult mediumDifficult;
+	ButtonHardDifficult hardDifficult;
 
 	MainDifficultWindow();
 	~MainDifficultWindow();

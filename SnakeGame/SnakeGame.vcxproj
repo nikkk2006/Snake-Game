@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonEasyDifficult.cpp" />
     <ClCompile Include="buttonExit.cpp" />
+    <ClCompile Include="ButtonHardDifficult.cpp" />
+    <ClCompile Include="ButtonMediumDifficult.cpp" />
     <ClCompile Include="buttonSettings.cpp" />
     <ClCompile Include="buttonShop.cpp" />
     <ClCompile Include="buttonStartTheGame.cpp" />
@@ -137,13 +140,17 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="generateRandomCell.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainDifficultWindow.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="startTheMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonEasyDifficult.h" />
     <ClInclude Include="buttonExit.h" />
+    <ClInclude Include="ButtonHardDifficult.h" />
+    <ClInclude Include="ButtonMediumDifficult.h" />
     <ClInclude Include="buttonSettings.h" />
     <ClInclude Include="buttonShop.h" />
     <ClInclude Include="buttonStartTheGame.h" />
@@ -151,6 +158,7 @@
     <ClInclude Include="functions.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="MainDifficultWindow.h" />
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
