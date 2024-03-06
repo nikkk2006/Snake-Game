@@ -10,7 +10,7 @@ mainMenu::~mainMenu(){
 	CloseWindow();
 }
 
-void mainMenu::Update(){
+bool mainMenu::Update(){
 	// Button Start
 	if (CheckCollisionPointRec(GetMousePosition(), buttonStart.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
@@ -34,6 +34,28 @@ void mainMenu::Update(){
 	}
 
 	// Button Settings
+	if (CheckCollisionPointRec(GetMousePosition(), buttonSettings.button)) {
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+			buttonSettings.buttonPressed = true;
+			// TODO
+		}
+	}
+	else {
+		buttonSettings.buttonPressed = false;
+	}
+
+	// Button Exit
+	if (CheckCollisionPointRec(GetMousePosition(), buttonExit.button)) {
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+			buttonExit.buttonPressed = true;
+			return false;
+		}
+	}
+	else {
+		buttonExit.buttonPressed = false;
+	}
+
+	return true;
 }
 
 void mainMenu::Draw(){
@@ -41,4 +63,6 @@ void mainMenu::Draw(){
 	DrawText("Snake Game", cellSize * 4, 10, 40, darkGreen);
 	buttonStart.Draw();
 	buttonShop.Draw();
+	buttonSettings.Draw();
+	buttonExit.Draw();
 }

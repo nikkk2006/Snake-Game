@@ -5,6 +5,8 @@
 #include "raylib.h"
 #include "buttonStartTheGame.h"
 #include "buttonShop.h"
+#include "buttonSettings.h"
+#include "buttonExit.h"
 
 
 extern const int cellSize;
@@ -15,12 +17,16 @@ public:
 	int screenWidth;
 	int screenHeight;
 	const char* title;
+
+	// Buttons
 	buttonStartTheGame buttonStart;
 	buttonShop buttonShop;
+	buttonSettings buttonSettings;
+	buttonExit buttonExit;
 
 	mainMenu();
 	~mainMenu();
-	void Update();
+	bool Update();
 	void Draw();
 };
 

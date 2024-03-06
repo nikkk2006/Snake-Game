@@ -21,57 +21,9 @@ extern const float speed = 0.15f;
 
 int main() {
 
-	//InitWindow(cellSize * 15, cellSize * 20, "Menu");
-	//Image icon = LoadImage("snakeIcon.png");;
-	//SetWindowIcon(icon);
-	//UnloadImage(icon);
-
-	//buttonStartTheGame buttonStart = buttonStartTheGame();
-
-	//while (WindowShouldClose() == false) {
-	//	BeginDrawing();
-
-	//	if (CheckCollisionPointRec(GetMousePosition(), buttonStart.button)) {
-	//		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-	//			buttonStart.buttonPressed = true;
-
-	//			CloseWindow();
-	//			break;
-	//		}
-	//	}
-	//	else {
-	//		buttonStart.buttonPressed = false;
-	//	}
-
-	//	ClearBackground(green);
-	//	DrawText("Snake Game", cellSize * 4, 10, 40, darkGreen);
-	//	buttonStart.Draw();
-
-
-	//	EndDrawing();
-	//}
-
-	//InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Retro Snake");
-	//SetTargetFPS(60);
-
-	//Game game = Game();
-	//mainWindow window = mainWindow();
-
-	//while (WindowShouldClose() == false) {
-	//	BeginDrawing();
-
-	//	// Updating
-	//	window.Update();
-
-	//	// Drawing
-	//	window.Draw();
-
-	//	EndDrawing();
-	//}
-	//mainWindow window = mainWindow();
 	mainMenu menu = mainMenu();
 
-	while (WindowShouldClose() == false) {
+	while (menu.Update() && WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating
