@@ -15,7 +15,9 @@ bool mainMenu::Update(){
 	if (CheckCollisionPointRec(GetMousePosition(), buttonStart.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			buttonStart.buttonPressed = true;
-			// TODO
+
+			CloseWindow();
+			startTheMainWinow();
 		}
 	}
 	else {

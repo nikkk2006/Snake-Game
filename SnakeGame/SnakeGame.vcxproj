@@ -140,6 +140,7 @@
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="startTheMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buttonExit.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
+    <ClInclude Include="startTheMainWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

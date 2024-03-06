@@ -3,7 +3,7 @@
 
 
 #include "raylib.h"
-#include "functions.h"
+#include "startTheMainWindow.h"
 #include "buttonStartTheGame.h"
 #include "buttonShop.h"
 #include "buttonSettings.h"
