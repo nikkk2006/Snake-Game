@@ -7,8 +7,8 @@ void Snake::Draw(){
 		float x = iterator->x;
 		float y = iterator->y;
 
-		Rectangle segment{offset + x * cellSize, offset + y * cellSize, (float)cellSize, (float)cellSize };
-		DrawRectangleRounded(segment, 0.5, 6, darkGreen);
+		Rectangle segment{ MyConstants::offset + x * MyConstants::cellSize, MyConstants::offset + y * MyConstants::cellSize, (float)MyConstants::cellSize, (float)MyConstants::cellSize };
+		DrawRectangleRounded(segment, 0.5, 6, MyConstants::darkGreen);
 	}
 }
 

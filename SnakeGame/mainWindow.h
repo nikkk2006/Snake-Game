@@ -6,15 +6,9 @@
 #include "raylib.h"
 #include "Game.h"
 
+#include "constants.h"
+namespace C = MyConstants;
 
-extern const int cellSize;
-extern const int cellCount;
-extern const int offset;
-extern const float speed;
-
-extern const Color green;
-extern const Color darkGreen;
-extern const Color red;
 
 class mainWindow{
 public:

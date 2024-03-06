@@ -1,7 +1,7 @@
 #include "mainMenu.h"
 
 
-mainMenu::mainMenu() : screenWidth(cellSize * 15), screenHeight(cellSize * 20), title("Main Menu") {
+mainMenu::mainMenu() : screenWidth(MyConstants::cellSize * 15), screenHeight(MyConstants::cellSize * 20), title("Main Menu") {
 	InitWindow(screenWidth, screenHeight, title);
 	SetTargetFPS(60);
 }
@@ -59,8 +59,8 @@ bool mainMenu::Update(){
 }
 
 void mainMenu::Draw(){
-	ClearBackground(green);
-	DrawText("Snake Game", cellSize * 4, 10, 40, darkGreen);
+	ClearBackground(MyConstants::green);
+	DrawText("Snake Game", MyConstants::cellSize * 4, 10, 40, MyConstants::darkGreen);
 	buttonStart.Draw();
 	buttonShop.Draw();
 	buttonSettings.Draw();

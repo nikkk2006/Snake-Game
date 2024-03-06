@@ -3,10 +3,8 @@
 
 
 #include "raylib.h"
+#include "constants.h"
 
-
-extern const int cellSize;
-extern const Color darkGreen;
 
 class buttonSettings{
 public:

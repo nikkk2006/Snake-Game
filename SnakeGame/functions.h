@@ -4,11 +4,10 @@
 
 #include "raylib.h"
 #include "raymath.h"
+#include "buttonExit.h"
+#include "constants.h"
 #include <deque>
 
-
-extern double lastUpdateTime;
-extern const int cellCount;
 
 bool eventTriggered(double interval);
 

@@ -1,8 +1,8 @@
 #include "mainWindow.h"
 
 
-mainWindow::mainWindow() : screenWidth(2 * offset + cellSize * cellCount),
-						   screenHeight(2 * offset + cellSize * cellCount),
+mainWindow::mainWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
+						   screenHeight(2 * C::offset + C::cellSize * C::cellCount),
 						   title("Retro Snake")
 {
 	InitWindow(screenWidth, screenHeight, title);
@@ -10,19 +10,19 @@ mainWindow::mainWindow() : screenWidth(2 * offset + cellSize * cellCount),
 }
 
 void mainWindow::Draw() {
-	ClearBackground(green);
+	ClearBackground(C::green);
 
-	DrawRectangleLinesEx(Rectangle{ static_cast<float>(offset - 5),
-		static_cast<float>(offset - 5),
-		static_cast<float>(cellSize* cellCount + 10),
-		static_cast<float>(cellSize * cellCount + 10)}, 5, darkGreen);
+	DrawRectangleLinesEx(Rectangle{ static_cast<float>(C::offset - 5),
+		static_cast<float>(C::offset - 5),
+		static_cast<float>(C::cellSize* C::cellCount + 10),
+		static_cast<float>(C::cellSize * C::cellCount + 10)}, 5, C::darkGreen);
 
-	DrawText("Retro Snake", offset - 5, 20, 40, darkGreen);
-	DrawText(TextFormat("Score: %i", game.score), offset - 5, offset + cellSize * cellCount + 10, 40, darkGreen);
+	DrawText("Retro Snake", C::offset - 5, 20, 40, C::darkGreen);
+	DrawText(TextFormat("Score: %i", game.score), C::offset - 5, C::offset + C::cellSize * C::cellCount + 10, 40, C::darkGreen);
 
 	std::string strHighScore = std::to_string(game.highScore);
 	int scoreWidth = MeasureText(strHighScore.c_str(), 40);  
-	DrawText(strHighScore.c_str(), offset + cellSize * cellCount - scoreWidth + 5, offset + cellSize * cellCount + 10, 40, darkGreen);
+	DrawText(strHighScore.c_str(), C::offset + C::cellSize * C::cellCount - scoreWidth + 5, C::offset + C::cellSize * C::cellCount + 10, 40, C::darkGreen);
 
 	game.Draw();
 
@@ -33,7 +33,7 @@ mainWindow::~mainWindow(){
 }
 
 void mainWindow::Update() {
-	if (eventTriggered(speed)) {
+	if (eventTriggered(C::speed)) {
 		game.Update();
 	}
 

@@ -7,8 +7,8 @@ Food::Food(std::deque<Vector2> snakeBody) {
 
 void Food::Draw(){
 
-	Rectangle segment{ offset + position.x * cellSize, offset + position.y * cellSize, (float)cellSize, (float)cellSize };
-	DrawRectangleRounded(segment, 0.5, 6, red);
+	Rectangle segment{ MyConstants::offset + position.x * MyConstants::cellSize, MyConstants::offset + position.y * MyConstants::cellSize, (float)MyConstants::cellSize, (float)MyConstants::cellSize };
+	DrawRectangleRounded(segment, 0.5, 6, MyConstants::red);
 }
 
 Vector2 Food::generateRandomPos(std::deque<Vector2>& snakeBody) {

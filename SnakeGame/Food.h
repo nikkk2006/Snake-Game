@@ -5,14 +5,9 @@
 #include "raylib.h"
 #include <deque>
 #include "functions.h"
+#include "constants.h"
 #include <algorithm>
 
-
-extern const int cellSize;
-extern const int cellCount;
-extern const int offset;
-
-extern const Color red;
 
 class Food{
 public:

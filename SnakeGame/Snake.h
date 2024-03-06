@@ -4,12 +4,9 @@
 
 #include "raylib.h"
 #include "raymath.h"
+#include "constants.h"
 #include <deque>
 
-
-extern const Color darkGreen;
-extern const int cellSize;
-extern const int offset;
 
 class Snake{
 public:

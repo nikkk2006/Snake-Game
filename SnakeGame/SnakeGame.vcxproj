@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="buttonExit.cpp" />
+    <ClCompile Include="buttonSettings.cpp" />
     <ClCompile Include="buttonShop.cpp" />
     <ClCompile Include="buttonStartTheGame.cpp" />
     <ClCompile Include="elementInDeque.cpp" />
@@ -140,8 +142,11 @@
     <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buttonExit.h" />
+    <ClInclude Include="buttonSettings.h" />
     <ClInclude Include="buttonShop.h" />
     <ClInclude Include="buttonStartTheGame.h" />
+    <ClInclude Include="constants.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />

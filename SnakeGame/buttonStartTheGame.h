@@ -3,10 +3,7 @@
 
 
 #include "raylib.h"
-
-
-extern const int cellSize;
-extern const Color darkGreen;
+#include "constants.h"
 
 
 class buttonStartTheGame{

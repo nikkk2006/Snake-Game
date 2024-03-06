@@ -3,14 +3,13 @@
 
 
 #include "raylib.h"
+#include "functions.h"
 #include "buttonStartTheGame.h"
 #include "buttonShop.h"
 #include "buttonSettings.h"
 #include "buttonExit.h"
+#include "constants.h"
 
-
-extern const int cellSize;
-extern const Color green;
 
 class mainMenu{
 public:
