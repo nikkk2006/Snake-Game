@@ -127,18 +127,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="buttonShop.cpp" />
+    <ClCompile Include="buttonStartTheGame.cpp" />
     <ClCompile Include="elementInDeque.cpp" />
     <ClCompile Include="eventTriggered.cpp" />
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="generateRandomCell.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainMenu.cpp" />
+    <ClCompile Include="mainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buttonShop.h" />
+    <ClInclude Include="buttonStartTheGame.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="mainMenu.h" />
+    <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

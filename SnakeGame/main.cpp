@@ -2,6 +2,8 @@
 #include "Snake.h"
 #include "Game.h"
 #include "functions.h"
+#include "mainWindow.h"
+#include "mainMenu.h"
 
 
 extern const Color green = { 173, 204, 96, 255 };
@@ -14,57 +16,73 @@ extern const int offset = 75;
 
 extern double lastUpdateTime = 0.0;
 
-const float speed = 0.15;
+extern const float speed = 0.15f;
 
 
 int main() {
 
-	InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Retro Snake");
-	SetTargetFPS(60);
+	//InitWindow(cellSize * 15, cellSize * 20, "Menu");
+	//Image icon = LoadImage("snakeIcon.png");;
+	//SetWindowIcon(icon);
+	//UnloadImage(icon);
 
-	Game game = Game();
+	//buttonStartTheGame buttonStart = buttonStartTheGame();
+
+	//while (WindowShouldClose() == false) {
+	//	BeginDrawing();
+
+	//	if (CheckCollisionPointRec(GetMousePosition(), buttonStart.button)) {
+	//		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+	//			buttonStart.buttonPressed = true;
+
+	//			CloseWindow();
+	//			break;
+	//		}
+	//	}
+	//	else {
+	//		buttonStart.buttonPressed = false;
+	//	}
+
+	//	ClearBackground(green);
+	//	DrawText("Snake Game", cellSize * 4, 10, 40, darkGreen);
+	//	buttonStart.Draw();
+
+
+	//	EndDrawing();
+	//}
+
+	//InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Retro Snake");
+	//SetTargetFPS(60);
+
+	//Game game = Game();
+	//mainWindow window = mainWindow();
+
+	//while (WindowShouldClose() == false) {
+	//	BeginDrawing();
+
+	//	// Updating
+	//	window.Update();
+
+	//	// Drawing
+	//	window.Draw();
+
+	//	EndDrawing();
+	//}
+	//mainWindow window = mainWindow();
+	mainMenu menu = mainMenu();
 
 	while (WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating
-		if (eventTriggered(speed)) {
-			game.Update();
-		}
-
-		if ((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && game.snake.direction.y != 1) {
-			game.snake.direction = { 0, -1 };
-			game.running = true;
-		}
-		if ((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && game.snake.direction.y != -1) {
-			game.snake.direction = { 0, 1 };
-			game.running = true;
-		}
-		if ((IsKeyPressed(KEY_LEFT) || IsKeyPressed(KEY_A)) && game.snake.direction.x != 1) {
-			game.snake.direction = {-1, 0};
-			game.running = true;
-		}
-		if ((IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_D)) && game.snake.direction.x != -1) {
-			game.snake.direction = { 1, 0 };
-			game.running = true;
-		}
+		menu.Update();
 
 		// Drawing
-		ClearBackground(green);
-		DrawRectangleLinesEx(Rectangle{offset - 5, offset - 5, cellSize * cellCount + 10, cellSize * cellCount + 10 }, 5, darkGreen);
-		DrawText("Retro Snake", offset - 5, 20, 40, darkGreen);
-		DrawText(TextFormat("Score: %i", game.score), offset - 5, offset + cellSize * cellCount + 10, 40, darkGreen);
-
-		std::string strHighScore = std::to_string(game.highScore);
-		int scoreWidth = MeasureText(strHighScore.c_str(), 40);    // width of number
-		DrawText(strHighScore.c_str(), offset + cellSize * cellCount - scoreWidth + 5, offset + cellSize * cellCount + 10, 40, darkGreen);
-
-		game.Draw();
+		menu.Draw();
 
 		EndDrawing();
 	}
 
-	CloseWindow();
 
 	return 0;
 }
