@@ -1,11 +1,12 @@
-#include "mainMenu.h"
+//#include "mainMenu.h"
+#include "MainDifficultWindow.h"
 
 
 int main() {
 
-	mainMenu menu = mainMenu();
+	MainDifficultWindow menu = MainDifficultWindow();
 
-	while (menu.Update() && WindowShouldClose() == false) {
+	while (WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating

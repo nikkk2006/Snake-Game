@@ -21,4 +21,5 @@ void MainDifficultWindow::Draw(){
 	easyDifficult.Draw();
 	mediumDifficult.Draw();
 	hardDifficult.Draw();
+	buttonBack.Draw();
 }

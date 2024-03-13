@@ -6,6 +6,7 @@
 #include "ButtonEasyDifficult.h"
 #include "ButtonMediumDifficult.h"
 #include "ButtonHardDifficult.h"
+#include "ButtonBack.h"
 
 class MainDifficultWindow {
 public:
@@ -17,6 +18,7 @@ public:
 	ButtonEasyDifficult easyDifficult;
 	ButtonMediumDifficult mediumDifficult;
 	ButtonHardDifficult hardDifficult;
+	ButtonBack buttonBack;
 
 	MainDifficultWindow();
 	~MainDifficultWindow();

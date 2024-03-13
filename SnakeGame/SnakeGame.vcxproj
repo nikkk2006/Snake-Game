@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonBack.cpp" />
     <ClCompile Include="ButtonEasyDifficult.cpp" />
     <ClCompile Include="buttonExit.cpp" />
     <ClCompile Include="ButtonHardDifficult.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="startTheMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonBack.h" />
     <ClInclude Include="ButtonEasyDifficult.h" />
     <ClInclude Include="buttonExit.h" />
     <ClInclude Include="ButtonHardDifficult.h" />
