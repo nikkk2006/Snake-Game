@@ -17,7 +17,7 @@ bool mainMenu::Update(){
 			buttonStart.buttonPressed = true;
 
 			CloseWindow();
-			startTheMainWinow();
+			startTheDifficultWindow();
 		}
 	}
 	else {

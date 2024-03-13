@@ -145,6 +145,7 @@
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="startTheDifficultWindow.cpp" />
     <ClCompile Include="startTheMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
+    <ClInclude Include="startTheDifficultWindow.h" />
     <ClInclude Include="startTheMainWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
