@@ -5,7 +5,7 @@ void startTheDifficultWindow(){
 
 	MainDifficultWindow window = MainDifficultWindow();
 
-	while (WindowShouldClose() == false) {
+	while (window.Update() && WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating

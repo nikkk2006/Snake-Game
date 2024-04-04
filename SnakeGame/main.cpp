@@ -5,8 +5,7 @@ int main() {
 
 	mainMenu menu = mainMenu();
 
-	while (menu.Update() && WindowShouldClose() == false) {
-		BeginDrawing();
+	while (menu.Update() && WindowShouldClose() == false) {		
 
 		// Updating
 		menu.Update();
@@ -14,7 +13,6 @@ int main() {
 		// Drawing
 		menu.Draw();
 
-		EndDrawing();
 	}
 
 	return 0;

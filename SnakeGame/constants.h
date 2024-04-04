@@ -12,7 +12,6 @@ namespace MyConstants {
 	const int cellSize = 30;
 	const int cellCount = 25;
 	const int offset = 75;
-	const float speed = 0.15f;
 }
 
 #endif // !CONSTANTS_H

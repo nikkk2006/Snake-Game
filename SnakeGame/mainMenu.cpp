@@ -1,7 +1,7 @@
 #include "mainMenu.h"
 
 
-mainMenu::mainMenu() : screenWidth(MyConstants::cellSize * 15), screenHeight(MyConstants::cellSize * 20), title("Main Menu") {
+mainMenu::mainMenu() : screenWidth(MyConstants::cellSize * 15), screenHeight(MyConstants::cellSize * 20), title("Main Menu"){
 	InitWindow(screenWidth, screenHeight, title);
 	SetTargetFPS(60);
 }
@@ -11,12 +11,12 @@ mainMenu::~mainMenu(){
 }
 
 bool mainMenu::Update(){
+
 	// Button Start
 	if (CheckCollisionPointRec(GetMousePosition(), buttonStart.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			buttonStart.buttonPressed = true;
 
-			CloseWindow();
 			startTheDifficultWindow();
 		}
 	}
@@ -58,17 +58,24 @@ bool mainMenu::Update(){
 	}
 
 	return true;
+
 }
 
 void mainMenu::Draw(){
+
+	BeginDrawing();
 	ClearBackground(MyConstants::green);
+
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
-	static_cast<float>(5),
-	static_cast<float>(screenWidth - 10),
-	static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
+static_cast<float>(5),
+static_cast<float>(screenWidth - 10),
+static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 	DrawText("Snake Game", MyConstants::cellSize * 4, 10, 40, MyConstants::darkGreen);
 	buttonStart.Draw();
 	buttonShop.Draw();
 	buttonSettings.Draw();
 	buttonExit.Draw();
+
+	EndDrawing();
+
 }

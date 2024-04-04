@@ -33,7 +33,7 @@ mainWindow::~mainWindow(){
 }
 
 void mainWindow::Update() {
-	if (eventTriggered(C::speed)) {
+	if (eventTriggered(snakeSpeed)) {
 		game.Update();
 	}
 

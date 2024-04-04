@@ -3,10 +3,13 @@
 
 
 #include "constants.h"
+#include "snakeSpeed.h"
 #include "ButtonEasyDifficult.h"
 #include "ButtonMediumDifficult.h"
 #include "ButtonHardDifficult.h"
 #include "ButtonBack.h"
+#include "startTheMainWindow.h"
+
 
 class MainDifficultWindow {
 public:
@@ -22,7 +25,7 @@ public:
 
 	MainDifficultWindow();
 	~MainDifficultWindow();
-	void Update();
+	bool Update();
 	void Draw();
 };
 

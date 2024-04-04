@@ -9,6 +9,7 @@
 #include "constants.h"
 namespace C = MyConstants;
 
+extern float snakeSpeed;
 
 class mainWindow{
 public:

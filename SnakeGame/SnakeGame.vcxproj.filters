@@ -131,5 +131,8 @@
     <ClInclude Include="startTheDifficultWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="snakeSpeed.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

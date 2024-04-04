@@ -3,16 +3,16 @@
 
 void startTheMainWinow() {
 
-	mainWindow menu = mainWindow();
+	mainWindow window = mainWindow();
 
 	while (WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating
-		menu.Update();
+		window.Update();
 
 		// Drawing
-		menu.Draw();
+		window.Draw();
 
 		EndDrawing();
 	}

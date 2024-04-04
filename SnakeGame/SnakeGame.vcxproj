@@ -165,6 +165,7 @@
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
+    <ClInclude Include="snakeSpeed.h" />
     <ClInclude Include="startTheDifficultWindow.h" />
     <ClInclude Include="startTheMainWindow.h" />
   </ItemGroup>
