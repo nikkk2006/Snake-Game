@@ -10,6 +10,7 @@
 #include "buttonSettings.h"
 #include "buttonExit.h"
 #include "constants.h"
+#include "buttonEnums.h"
 
 
 class mainMenu{
@@ -26,8 +27,12 @@ public:
 
 	mainMenu();
 	~mainMenu();
-	bool Update();
 	void Draw();
+
+	bool IsStartButtonPressed();
+	bool IsStartShopButtonPressed();
+	bool IsStartSettingsButtonPressed();
+	bool IsStartExitButtonPressed();
 };
 
 #endif // !MAIN_MENU_H

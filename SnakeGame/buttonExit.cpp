@@ -2,7 +2,7 @@
 
 
 buttonExit::buttonExit() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("exit"), buttonPressed(false) {
-	button = { static_cast<float>(MyConstants::cellSize * 2.5), static_cast<float>(MyConstants::cellSize * 15), static_cast<float>(width), static_cast<float>(height) };
+	button = { static_cast<float>(MyConstants::cellSize * 10), static_cast<float>(MyConstants::cellSize * 20), static_cast<float>(width), static_cast<float>(height) };
 }
 
 void buttonExit::Draw(){

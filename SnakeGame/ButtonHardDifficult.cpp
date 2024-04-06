@@ -1,8 +1,8 @@
 #include "ButtonHardDifficult.h"
 
 
-ButtonHardDifficult::ButtonHardDifficult() : width(MyConstants::cellSize * 5), height(MyConstants::cellSize * 2), text("hard"), buttonPressed(false){
-	button = { static_cast<float>(MyConstants::cellSize * 14), static_cast<float>(MyConstants::cellSize * 3), static_cast<float>(width), static_cast<float>(height) };
+ButtonHardDifficult::ButtonHardDifficult() : width(MyConstants::cellSize * 6), height(MyConstants::cellSize * 3), text("hard"), buttonPressed(false){
+	button = { static_cast<float>(MyConstants::cellSize * 20), static_cast<float>(MyConstants::cellSize * 3), static_cast<float>(width), static_cast<float>(height) };
 }
 
 void ButtonHardDifficult::Draw(){

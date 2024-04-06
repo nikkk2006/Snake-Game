@@ -5,8 +5,8 @@ mainWindow::mainWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCoun
 						   screenHeight(2 * C::offset + C::cellSize * C::cellCount),
 						   title("Retro Snake")
 {
-	InitWindow(screenWidth, screenHeight, title);
-	SetTargetFPS(60);
+	//InitWindow(screenWidth, screenHeight, title);
+	//SetTargetFPS(60);
 }
 
 void mainWindow::Draw() {

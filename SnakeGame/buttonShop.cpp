@@ -2,7 +2,7 @@
 
 
 buttonShop::buttonShop() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("shop"), buttonPressed(false) {
-	button = { static_cast<float>(MyConstants::cellSize * 2.5), static_cast<float>(MyConstants::cellSize * 7), static_cast<float>(width), static_cast<float>(height) };
+	button = { static_cast<float>(MyConstants::cellSize * 10), static_cast<float>(MyConstants::cellSize * 12), static_cast<float>(width), static_cast<float>(height) };
 }
 
 void buttonShop::Draw(){

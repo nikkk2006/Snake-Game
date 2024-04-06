@@ -1,8 +1,8 @@
 #include "ButtonBack.h"
 
 
-ButtonBack::ButtonBack() : width(MyConstants::cellSize * 5), height(MyConstants::cellSize * 2), text("back"), buttonPressed(false) {
-	button = { static_cast<float>(MyConstants::cellSize * 8), static_cast<float>(MyConstants::cellSize * 6), static_cast<float>(width), static_cast<float>(height) };
+ButtonBack::ButtonBack() : width(MyConstants::cellSize * 6), height(MyConstants::cellSize * 3), text("back"), buttonPressed(false) {
+	button = { static_cast<float>(MyConstants::cellSize * 13), static_cast<float>(MyConstants::cellSize * 24), static_cast<float>(width), static_cast<float>(height) };
 }
 
 void ButtonBack::Draw(){

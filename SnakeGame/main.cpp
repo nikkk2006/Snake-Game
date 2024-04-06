@@ -1,18 +1,15 @@
-#include "mainMenu.h"
+#include "startTheMainMenu.h"
 
 
 int main() {
 
-	mainMenu menu = mainMenu();
+	int pressedButton = startTheMainMenu();
 
-	while (menu.Update() && WindowShouldClose() == false) {		
-
-		// Updating
-		menu.Update();
-
-		// Drawing
-		menu.Draw();
-
+	switch (pressedButton) {
+	case START: startTheDifficultWindow(); break;
+	case SHOP: // TODO; break;
+	case SETTINGS: // TODO; break;
+	case EXIT: break;
 	}
 
 	return 0;
