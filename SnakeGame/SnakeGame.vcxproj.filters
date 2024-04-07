@@ -107,18 +107,6 @@
     <ClInclude Include="MainDifficultWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ButtonEasyDifficult.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonMediumDifficult.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonHardDifficult.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonBack.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="startTheDifficultWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -132,6 +120,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="mainMenuButtons.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="difficultWindowButtons.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

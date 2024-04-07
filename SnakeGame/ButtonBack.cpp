@@ -1,4 +1,4 @@
-#include "ButtonBack.h"
+#include "difficultWindowButtons.h"
 
 
 ButtonBack::ButtonBack() : width(MyConstants::cellSize * 6), height(MyConstants::cellSize * 3), text("back"), buttonPressed(false) {

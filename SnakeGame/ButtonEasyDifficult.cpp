@@ -1,4 +1,4 @@
-#include "ButtonEasyDifficult.h"
+#include "difficultWindowButtons.h"
 
 
 ButtonEasyDifficult::ButtonEasyDifficult() : width(MyConstants::cellSize * 6), height(MyConstants::cellSize * 3), text("easy"), buttonPressed(false) {

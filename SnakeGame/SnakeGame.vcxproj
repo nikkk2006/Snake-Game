@@ -150,12 +150,9 @@
     <ClCompile Include="startTheMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ButtonBack.h" />
-    <ClInclude Include="ButtonEasyDifficult.h" />
     <ClInclude Include="buttonEnums.h" />
-    <ClInclude Include="ButtonHardDifficult.h" />
-    <ClInclude Include="ButtonMediumDifficult.h" />
     <ClInclude Include="constants.h" />
+    <ClInclude Include="difficultWindowButtons.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />

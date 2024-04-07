@@ -4,10 +4,7 @@
 
 #include "constants.h"
 #include "snakeSpeed.h"
-#include "ButtonEasyDifficult.h"
-#include "ButtonMediumDifficult.h"
-#include "ButtonHardDifficult.h"
-#include "ButtonBack.h"
+#include "difficultWindowButtons.h"
 #include "startTheMainWindow.h"
 
 
