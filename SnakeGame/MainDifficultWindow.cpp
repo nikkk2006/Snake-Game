@@ -1,4 +1,4 @@
-#include "MainDifficultWindow.h"
+#include "startWindowsFunctions.h"
 
 
 float snakeSpeed = SnakeSpeed::EASY;

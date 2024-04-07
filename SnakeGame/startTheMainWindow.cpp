@@ -1,4 +1,4 @@
-#include "startTheMainWindow.h"
+#include "startWindowsFunctions.h"
 
 
 void startTheMainWinow() {

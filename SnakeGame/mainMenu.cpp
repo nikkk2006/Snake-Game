@@ -1,4 +1,4 @@
-#include "mainMenu.h"
+#include "startWindowsFunctions.h"
 
 
 mainMenu::mainMenu() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),

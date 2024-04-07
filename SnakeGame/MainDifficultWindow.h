@@ -5,7 +5,6 @@
 #include "constants.h"
 #include "snakeSpeed.h"
 #include "difficultWindowButtons.h"
-#include "startTheMainWindow.h"
 
 
 class MainDifficultWindow {

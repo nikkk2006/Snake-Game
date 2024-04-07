@@ -162,9 +162,7 @@
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="snakeSpeed.h" />
-    <ClInclude Include="startTheDifficultWindow.h" />
-    <ClInclude Include="startTheMainMenu.h" />
-    <ClInclude Include="startTheMainWindow.h" />
+    <ClInclude Include="startWindowsFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

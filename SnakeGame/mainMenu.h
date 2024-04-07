@@ -3,8 +3,6 @@
 
 
 #include "raylib.h"
-#include "startTheMainWindow.h"
-#include "startTheDifficultWindow.h"
 #include "mainMenuButtons.h"
 #include "constants.h"
 #include "buttonEnums.h"
