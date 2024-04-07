@@ -5,10 +5,7 @@
 #include "raylib.h"
 #include "startTheMainWindow.h"
 #include "startTheDifficultWindow.h"
-#include "buttonStartTheGame.h"
-#include "buttonShop.h"
-#include "buttonSettings.h"
-#include "buttonExit.h"
+#include "mainMenuButtons.h"
 #include "constants.h"
 #include "buttonEnums.h"
 

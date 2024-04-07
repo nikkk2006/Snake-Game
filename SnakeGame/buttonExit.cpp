@@ -1,4 +1,4 @@
-#include "buttonExit.h"
+#include "mainMenuButtons.h"
 
 
 buttonExit::buttonExit() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("exit"), buttonPressed(false) {

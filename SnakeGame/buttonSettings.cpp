@@ -1,4 +1,4 @@
-#include "buttonSettings.h"
+#include "mainMenuButtons.h"
 
 buttonSettings::buttonSettings() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("settings"), buttonPressed(false) {
 	button = { static_cast<float>(MyConstants::cellSize * 10), static_cast<float>(MyConstants::cellSize * 16), static_cast<float>(width), static_cast<float>(height) };

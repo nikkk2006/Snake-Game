@@ -1,4 +1,4 @@
-#include "buttonShop.h"
+#include "mainMenuButtons.h"
 
 
 buttonShop::buttonShop() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("shop"), buttonPressed(false) {

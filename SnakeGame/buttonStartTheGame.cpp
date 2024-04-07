@@ -1,4 +1,4 @@
-#include "buttonStartTheGame.h"
+#include "mainMenuButtons.h"
 
 
 buttonStartTheGame::buttonStartTheGame() : width(MyConstants::cellSize * 10), height(MyConstants::cellSize * 3), text("start the game"), buttonPressed(false){
