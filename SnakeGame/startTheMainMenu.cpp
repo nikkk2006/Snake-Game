@@ -12,6 +12,7 @@ int startTheMainMenu(){
 		menu.Draw();
 
 		if (menu.IsStartButtonPressed()) { return START; }
+		if (menu.IsStartExitButtonPressed()) { return EXIT; }
 
 
 		// TODO

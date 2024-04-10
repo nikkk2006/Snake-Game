@@ -72,9 +72,6 @@
     <ClCompile Include="startTheMainGameOverWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="button.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="mainMenuButtons.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

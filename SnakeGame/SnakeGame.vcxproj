@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="button.cpp" />
     <ClCompile Include="ButtonBack.cpp" />
     <ClCompile Include="ButtonEasyDifficult.cpp" />
     <ClCompile Include="ButtonHardDifficult.cpp" />
