@@ -4,8 +4,7 @@
 float snakeSpeed = SnakeSpeed::EASY;
 
 MainDifficultWindow::MainDifficultWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
-											 screenHeight(2 * C::offset + C::cellSize * C::cellCount),
-											 title("Difficult Menu") 
+											 screenHeight(2 * C::offset + C::cellSize * C::cellCount)
 {
 }
 

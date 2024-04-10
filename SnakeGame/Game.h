@@ -9,6 +9,7 @@
 #include <string>
 #include <sstream>
 
+
 class Game{
 public:
 	Snake snake = Snake();

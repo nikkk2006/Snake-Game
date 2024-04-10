@@ -6,52 +6,38 @@
 #include "constants.h"
 
 
-class buttonStartTheGame {
+class Button {
 public:
 	bool buttonPressed;
 	const int width;
 	const int height;
-	const char* text;
+	const char* m_text;
+	const float m_y;
+	const float m_textX;
 	Rectangle button;
 
-	buttonStartTheGame();
+	Button(const char* text , const float y, const float textX);   // y - Расположение кнопки на экране по y
 	void Draw();
 };
 
-class buttonShop {
+class buttonStartTheGame : public Button{
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	buttonShop();
-	void Draw();
+	buttonStartTheGame(const char* text = "start the game", const float y = 8.0, const float textX = 35.0);
 };
 
-class buttonSettings {
+class buttonShop : public Button {
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	buttonSettings();
-	void Draw();
+	buttonShop(const char* text = "shop", const float y = 12.0, const float textX = 110.0);
 };
 
-class buttonExit {
+class buttonSettings : public Button{
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
+	buttonSettings(const char* text = "settings", const float y = 16.0, const float textX = 90.0);
+};
 
-	buttonExit();
-	void Draw();
+class buttonExit : public Button{
+public:
+	buttonExit(const char* text = "exit", const float y = 20.0, const float textX = 120.0);
 };
 
 #endif // !MAIN_MENU_BUTTONS_H
