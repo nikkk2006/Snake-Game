@@ -138,15 +138,15 @@
     <ClCompile Include="generateRandomCell.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainDifficultWindow.cpp" />
-    <ClCompile Include="MainGameOverWindow.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainMenuButtons.cpp" />
+    <ClCompile Include="MainShopWindow.cpp" />
     <ClCompile Include="mainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="startTheDifficultWindow.cpp" />
-    <ClCompile Include="startTheMainGameOverWindow.cpp" />
     <ClCompile Include="startTheMainMenu.cpp" />
     <ClCompile Include="startTheMainWindow.cpp" />
+    <ClCompile Include="startTheShopWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buttonEnums.h" />
@@ -156,9 +156,9 @@
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainDifficultWindow.h" />
-    <ClInclude Include="MainGameOverWindow.h" />
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="mainMenuButtons.h" />
+    <ClInclude Include="MainShopWindow.h" />
     <ClInclude Include="mainWindow.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="snakeSpeed.h" />
