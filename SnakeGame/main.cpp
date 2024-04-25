@@ -8,7 +8,7 @@ int main() {
 	switch (pressedButton) {
 	case START: startTheDifficultWindow(); break;
 	case SHOP: startTheShopWindow(); break;
-	case SETTINGS: // TODO; break;
+	case SETTINGS: startTheSettingsWindow(); break;
 	case EXIT: break;
 	}
 

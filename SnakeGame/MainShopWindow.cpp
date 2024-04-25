@@ -1,5 +1,9 @@
 #include "MainShopWindow.h"
 
+
+extern Color snakeColor;
+extern Color fieldColor;
+
 MainShopWindow::MainShopWindow() :
 	screenWidth(2 * C::offset + C::cellSize * C::cellCount),
 	screenHeight(2 * C::offset + C::cellSize * C::cellCount),
@@ -15,14 +19,13 @@ MainShopWindow::MainShopWindow() :
 	fieldWhiteRadioButton{false},
 	fieldGrayRadioButton{false},
 	fieldPurpleRadioButton{false}
-{
-}
+{}
 
 MainShopWindow::~MainShopWindow(){
 	CloseWindow();
 }
 
-void MainShopWindow::Update(){
+int MainShopWindow::Update(){
 	// radioButtons press check
 
 	if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
@@ -34,6 +37,7 @@ void MainShopWindow::Update(){
 			snakeWhiteRadioButton = false;
 			snakeGrayRadioButton = false;
 			snakePinkRadioButton = false;
+			snakeColor = C::darkGreen;
 		}
 		// snakeBlackRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 10, C::cellSize * 13, C::size, C::size })) {
@@ -42,6 +46,7 @@ void MainShopWindow::Update(){
 			snakeWhiteRadioButton = false;
 			snakeGrayRadioButton = false;
 			snakePinkRadioButton = false;
+			snakeColor = C::black;
 		}
 		// snakeWhiteRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 15, C::cellSize * 13, C::size, C::size })) {
@@ -50,6 +55,7 @@ void MainShopWindow::Update(){
 			snakeDarkGreenRadioButton = false;
 			snakeGrayRadioButton = false;
 			snakePinkRadioButton = false;
+			snakeColor = C::white;
 		}
 		// snakeGrayRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 20, C::cellSize * 13, C::size, C::size })) {
@@ -58,6 +64,7 @@ void MainShopWindow::Update(){
 			snakeBlackRadioButton = false;
 			snakeDarkGreenRadioButton = false;
 			snakePinkRadioButton = false;
+			snakeColor = C::gray;
 		}
 		// snakePinkRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 25, C::cellSize * 13, C::size, C::size })) {
@@ -66,14 +73,17 @@ void MainShopWindow::Update(){
 			snakeWhiteRadioButton = false;
 			snakeBlackRadioButton = false;
 			snakeDarkGreenRadioButton = false;
+			snakeColor = C::pink;
 		}
+
 		// fieldGreenRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 5, C::cellSize * 21, C::size, C::size })) {
+		if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 5, C::cellSize * 21, C::size, C::size })) {
 			fieldGreenRadioButton = true;
 			fieldBlackRadioButton = false;
 			fieldWhiteRadioButton = false;
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
+			fieldColor = C::green;
 		}
 		// fieldBlackRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 10, C::cellSize * 21, C::size, C::size })) {
@@ -82,6 +92,7 @@ void MainShopWindow::Update(){
 			fieldWhiteRadioButton = false;
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
+			fieldColor = C::fieldBlack;
 		}
 		// fieldWhiteRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 15, C::cellSize * 21, C::size, C::size })) {
@@ -90,6 +101,7 @@ void MainShopWindow::Update(){
 			fieldGreenRadioButton = false;
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
+			fieldColor = C::fieldWhite;
 		}
 		// fieldGrayRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 20, C::cellSize * 21, C::size, C::size })) {
@@ -98,6 +110,7 @@ void MainShopWindow::Update(){
 			fieldBlackRadioButton = false;
 			fieldGreenRadioButton = false;
 			fieldPurpleRadioButton = false;
+			fieldColor = C::fieldGray;
 		}
 		// fieldPurpleRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 25, C::cellSize * 21, C::size, C::size })) {
@@ -106,8 +119,20 @@ void MainShopWindow::Update(){
 			fieldWhiteRadioButton = false;
 			fieldBlackRadioButton = false;
 			fieldGreenRadioButton = false;
+			fieldColor = C::fieldPurple;
 		}
 	}
+
+	if (CheckCollisionPointRec(GetMousePosition(), startTheGame.button)) {
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+
+			CloseWindow();
+
+			startTheDifficultWindow();                // TODO
+			return false;
+		}
+	}
+	return true;
 }
 
 void MainShopWindow::Draw(){
@@ -166,4 +191,7 @@ static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 		DrawRectangleLinesEx(Rectangle{ C::cellSize * x, C::cellSize * 18, C::size * 3, C::size * 3 }, 4, C::brown);
 		x += 5;
 	}
+
+	// Drawing buttons
+	startTheGame.Draw();
 }

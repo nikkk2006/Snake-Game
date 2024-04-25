@@ -1,6 +1,8 @@
 #include "Snake.h"
 
 
+Color snakeColor = MyConstants::darkGreen;
+
 void Snake::Draw(){
 
 	for (auto iterator = body.begin(); iterator != body.end(); iterator++) {
@@ -8,7 +10,7 @@ void Snake::Draw(){
 		float y = iterator->y;
 
 		Rectangle segment{ MyConstants::offset + x * MyConstants::cellSize, MyConstants::offset + y * MyConstants::cellSize, (float)MyConstants::cellSize, (float)MyConstants::cellSize };
-		DrawRectangleRounded(segment, 0.5, 6, MyConstants::darkGreen);
+		DrawRectangleRounded(segment, 0.5, 6, snakeColor);   // change the color of the snake
 	}
 }
 

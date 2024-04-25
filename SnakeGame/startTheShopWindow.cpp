@@ -5,7 +5,7 @@ void startTheShopWindow() {
 	
 	MainShopWindow window = MainShopWindow();
 
-	while (!WindowShouldClose()) {
+	while (window.Update() && WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating

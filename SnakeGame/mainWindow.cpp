@@ -1,6 +1,8 @@
 #include "mainWindow.h"
 
 
+Color fieldColor = MyConstants::green;
+
 mainWindow::mainWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
 						   screenHeight(2 * C::offset + C::cellSize * C::cellCount),
 						   title("Retro Snake")
@@ -10,7 +12,7 @@ mainWindow::mainWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCoun
 }
 
 void mainWindow::Draw() {
-	ClearBackground(C::green);
+	ClearBackground(fieldColor);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(C::offset - 5),
 		static_cast<float>(C::offset - 5),

@@ -30,6 +30,11 @@ public:
 	bool IsStartExitButtonPressed();
 };
 
+class MainMenuForButtonBack : public mainMenu {
+public:
+	MainMenuForButtonBack();
+};
+
 #endif // !MAIN_MENU_H
 
 

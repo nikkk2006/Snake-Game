@@ -72,5 +72,4 @@ static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 	easyDifficult.Draw();
 	mediumDifficult.Draw();
 	hardDifficult.Draw();
-	buttonBack.Draw();
 }

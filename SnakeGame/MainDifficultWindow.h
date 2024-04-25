@@ -17,7 +17,6 @@ public:
 	ButtonEasyDifficult easyDifficult;
 	ButtonMediumDifficult mediumDifficult;
 	ButtonHardDifficult hardDifficult;
-	ButtonBack buttonBack;
 
 	MainDifficultWindow();
 	~MainDifficultWindow();

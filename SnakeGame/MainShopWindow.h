@@ -3,13 +3,19 @@
 
 
 #include "constants.h"
+#include "difficultWindowButtons.h"
+#include "startWindowsFunctions.h"
 namespace C = MyConstants;
+
 
 class MainShopWindow {
 public:
 	int screenWidth;
 	int screenHeight;
 	const char* title;
+
+	// Buttons
+	buttonStartTheGame startTheGame{ "start the game", 25.0, 35.0 };
 
 	// Snake radiobuttons pressed check
 	bool snakeDarkGreenRadioButton;
@@ -26,7 +32,7 @@ public:
 
 	MainShopWindow();
 	~MainShopWindow();
-	void Update();
+	int Update();
 	void Draw();
 };
 #endif // !MAIN_SHOP_WINDOW
