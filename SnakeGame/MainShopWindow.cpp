@@ -3,6 +3,8 @@
 
 extern Color snakeColor;
 extern Color fieldColor;
+extern Color borderColor;
+
 
 MainShopWindow::MainShopWindow() :
 	screenWidth(2 * C::offset + C::cellSize * C::cellCount),
@@ -84,6 +86,7 @@ int MainShopWindow::Update(){
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
 			fieldColor = C::green;
+			borderColor = C::darkGreen;
 		}
 		// fieldBlackRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 10, C::cellSize * 21, C::size, C::size })) {
@@ -102,6 +105,7 @@ int MainShopWindow::Update(){
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
 			fieldColor = C::textWhite;
+			borderColor = C::black;
 		}
 		// fieldGrayRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 20, C::cellSize * 21, C::size, C::size })) {
@@ -111,6 +115,7 @@ int MainShopWindow::Update(){
 			fieldGreenRadioButton = false;
 			fieldPurpleRadioButton = false;
 			fieldColor = C::fieldGray;
+			borderColor = C::black;
 		}
 		// fieldPurpleRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 25, C::cellSize * 21, C::size, C::size })) {
