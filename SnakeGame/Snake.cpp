@@ -1,7 +1,7 @@
 #include "Snake.h"
 
 
-Color snakeColor = MyConstants::darkGreen;
+Color snakeColor = MyConstants::textWhite;
 
 void Snake::Draw(){
 

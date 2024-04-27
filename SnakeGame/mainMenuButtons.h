@@ -4,6 +4,7 @@
 
 #include "raylib.h"
 #include "constants.h"
+namespace C = MyConstants;
 
 
 class Button {

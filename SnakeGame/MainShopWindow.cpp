@@ -8,14 +8,14 @@ MainShopWindow::MainShopWindow() :
 	screenWidth(2 * C::offset + C::cellSize * C::cellCount),
 	screenHeight(2 * C::offset + C::cellSize * C::cellCount),
 
-	snakeDarkGreenRadioButton{true},
+	snakeDarkGreenRadioButton{false},
 	snakeBlackRadioButton{false},
-	snakeWhiteRadioButton{false},
+	snakeWhiteRadioButton{true},
 	snakeGrayRadioButton{false},
 	snakePinkRadioButton{false},
 
-	fieldGreenRadioButton{true},
-	fieldBlackRadioButton{false},
+	fieldGreenRadioButton{false},
+	fieldBlackRadioButton{true},
 	fieldWhiteRadioButton{false},
 	fieldGrayRadioButton{false},
 	fieldPurpleRadioButton{false}
@@ -101,7 +101,7 @@ int MainShopWindow::Update(){
 			fieldGreenRadioButton = false;
 			fieldGrayRadioButton = false;
 			fieldPurpleRadioButton = false;
-			fieldColor = C::fieldWhite;
+			fieldColor = C::textWhite;
 		}
 		// fieldGrayRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 20, C::cellSize * 21, C::size, C::size })) {
@@ -136,16 +136,16 @@ int MainShopWindow::Update(){
 }
 
 void MainShopWindow::Draw(){
-	ClearBackground(MyConstants::green);
+	ClearBackground(MyConstants::black);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
-	DrawText("choose the skins", MyConstants::cellSize * 9, 10, 40, MyConstants::darkGreen);
+static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
+	DrawText("choose the skins", MyConstants::cellSize * 9, 10, 40, MyConstants::textYellow);
 
-	DrawText("Snake: ", MyConstants::cellSize * 2, MyConstants::cellSize * 8, 40, MyConstants::darkGreen);
-	DrawText("Field: ", MyConstants::cellSize * 2, MyConstants::cellSize * 16, 40, MyConstants::darkGreen);
+	DrawText("Snake: ", MyConstants::cellSize * 2, MyConstants::cellSize * 8, 40, MyConstants::textYellow);
+	DrawText("Field: ", MyConstants::cellSize * 2, MyConstants::cellSize * 16, 40, MyConstants::textYellow);
 
 	// Drawing snake color radiobuttons
 	DrawRectangle(C::cellSize * 5, C::cellSize * 13, C::size, C::size, snakeDarkGreenRadioButton ? GREEN : BLACK);
@@ -171,7 +171,7 @@ static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 	DrawRectangle(C::cellSize * 9.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldBlack);
 
 	DrawRectangle(C::cellSize * 15, C::cellSize * 21, C::size, C::size, fieldWhiteRadioButton ? GREEN : BLACK);
-	DrawRectangle(C::cellSize * 14.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldWhite);
+	DrawRectangle(C::cellSize * 14.3, C::cellSize * 18, C::size * 3, C::size * 3, C::textWhite);
 
 	DrawRectangle(C::cellSize * 20, C::cellSize * 21, C::size, C::size, fieldGrayRadioButton ? GREEN : BLACK);
 	DrawRectangle(C::cellSize * 19.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldGray);
@@ -182,13 +182,13 @@ static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
 	// Drawing line around colors
 	float x = 4.3;
 	for (int i = 0; i < 5; i++) {
-		DrawRectangleLinesEx(Rectangle{ C::cellSize * x, C::cellSize * 10, C::size * 3, C::size * 3 }, 4, C::brown);
+		DrawRectangleLinesEx(Rectangle{ C::cellSize * x, C::cellSize * 10, C::size * 3, C::size * 3 }, 4, C::textYellow);
 		x += 5;
 	}
 	x = 4.3;
 
 	for (int i = 0; i < 5; i++) {
-		DrawRectangleLinesEx(Rectangle{ C::cellSize * x, C::cellSize * 18, C::size * 3, C::size * 3 }, 4, C::brown);
+		DrawRectangleLinesEx(Rectangle{ C::cellSize * x, C::cellSize * 18, C::size * 3, C::size * 3 }, 4, C::textYellow);
 		x += 5;
 	}
 

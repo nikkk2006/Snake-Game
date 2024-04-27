@@ -12,12 +12,12 @@ MainSettingsWindow::~MainSettingsWindow(){
 }
 
 void MainSettingsWindow::Draw(){
-	ClearBackground(MyConstants::green);
+	ClearBackground(MyConstants::black);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
+static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
 
-	DrawText("settings", MyConstants::cellSize * 12.5, 10, 40, MyConstants::darkGreen);
+	DrawText("settings", MyConstants::cellSize * 12.5, 10, 40, MyConstants::textYellow);
 }

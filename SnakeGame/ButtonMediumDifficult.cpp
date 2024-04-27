@@ -5,6 +5,6 @@ ButtonMediumDifficult::ButtonMediumDifficult() : width(MyConstants::cellSize * 6
 }
 
 void ButtonMediumDifficult::Draw(){
-	DrawRectangleRounded(button, 0.5, 6, MyConstants::darkGreen);
-	DrawText(text, button.x + 30, button.y + 15, 30, BLACK);
+	DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	DrawText(text, button.x + 30, button.y + 15, 30, MyConstants::textWhite);
 }

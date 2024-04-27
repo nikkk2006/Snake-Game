@@ -4,7 +4,6 @@
 int startTheMainMenu(){
 
 	mainMenu menu = mainMenu();
-	//int buttonPressed;
 
 	while (!WindowShouldClose()) {
 
@@ -15,8 +14,5 @@ int startTheMainMenu(){
 		if (menu.IsStartShopButtonPressed()) { return SHOP; }
 		if (menu.IsStartExitButtonPressed()) { return EXIT; }
 		if (menu.IsStartSettingsButtonPressed()) { return SETTINGS; }
-
-
-		// TODO
 	}
 }

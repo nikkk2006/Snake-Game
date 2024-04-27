@@ -3,7 +3,7 @@
 
 mainMenu::mainMenu() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
 					   screenHeight(2 * C::offset + C::cellSize * C::cellCount),
-					   title("Main Menu")
+					   title("SnakeGame")
 {
 	InitWindow(screenWidth, screenHeight, title);
 }
@@ -15,13 +15,13 @@ mainMenu::~mainMenu(){
 void mainMenu::Draw(){
 
 	BeginDrawing();
-	ClearBackground(MyConstants::green);
+	ClearBackground(MyConstants::black);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
-	DrawText("Snake Game", MyConstants::cellSize * 11, 10, 40, MyConstants::darkGreen);
+static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
+	DrawText("Snake Game", MyConstants::cellSize * 11, 10, 40, MyConstants::textYellow);
 	buttonStart.Draw();
 	buttonShop.Draw();
 	buttonSettings.Draw();

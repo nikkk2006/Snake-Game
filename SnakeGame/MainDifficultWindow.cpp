@@ -61,13 +61,13 @@ bool MainDifficultWindow::Update(){
 }
 
 void MainDifficultWindow::Draw(){
-	ClearBackground(MyConstants::green);
+	ClearBackground(MyConstants::black);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::darkGreen);
-	DrawText("choose the difficult", MyConstants::cellSize * 9, 10, 40, MyConstants::darkGreen);
+static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
+	DrawText("choose the difficult", MyConstants::cellSize * 9, 10, 40, MyConstants::textYellow);
 
 	easyDifficult.Draw();
 	mediumDifficult.Draw();
