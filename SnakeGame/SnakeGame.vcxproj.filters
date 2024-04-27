@@ -36,25 +36,16 @@
     <ClCompile Include="generateRandomCell.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="mainWindow.cpp">
+    <ClCompile Include="MainWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenu.cpp">
+    <ClCompile Include="MainMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="startTheMainWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="MainDifficultWindow.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ButtonEasyDifficult.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ButtonMediumDifficult.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ButtonHardDifficult.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="ButtonBack.cpp">
@@ -66,7 +57,7 @@
     <ClCompile Include="startTheMainMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenuButtons.cpp">
+    <ClCompile Include="MainMenuButtons.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="MainShopWindow.cpp">
@@ -79,6 +70,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="startTheSettingsWindow.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DifficultWindowButtons.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,10 +89,10 @@
     <ClInclude Include="Game.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="mainWindow.h">
+    <ClInclude Include="MainWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="mainMenu.h">
+    <ClInclude Include="MainMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="constants.h">
@@ -113,7 +107,7 @@
     <ClInclude Include="buttonEnums.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="mainMenuButtons.h">
+    <ClInclude Include="MainMenuButtons.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="difficultWindowButtons.h">
