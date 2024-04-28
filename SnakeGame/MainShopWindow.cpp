@@ -14,13 +14,13 @@ MainShopWindow::MainShopWindow() :
 	snakeBlackRadioButton{false},
 	snakeWhiteRadioButton{true},
 	snakeGrayRadioButton{false},
-	snakePinkRadioButton{false},
+	snakeDarkOliveRadioButton{false},
 
 	fieldGreenRadioButton{false},
 	fieldBlackRadioButton{true},
 	fieldWhiteRadioButton{false},
 	fieldGrayRadioButton{false},
-	fieldPurpleRadioButton{false}
+	fieldOliveRadioButton{false}
 {}
 
 MainShopWindow::~MainShopWindow(){
@@ -38,7 +38,7 @@ int MainShopWindow::Update(){
 			snakeBlackRadioButton = false;
 			snakeWhiteRadioButton = false;
 			snakeGrayRadioButton = false;
-			snakePinkRadioButton = false;
+			snakeDarkOliveRadioButton = false;
 			snakeColor = C::darkGreen;
 		}
 		// snakeBlackRadioButton check
@@ -47,7 +47,7 @@ int MainShopWindow::Update(){
 			snakeDarkGreenRadioButton = false;
 			snakeWhiteRadioButton = false;
 			snakeGrayRadioButton = false;
-			snakePinkRadioButton = false;
+			snakeDarkOliveRadioButton = false;
 			snakeColor = C::black;
 		}
 		// snakeWhiteRadioButton check
@@ -56,7 +56,7 @@ int MainShopWindow::Update(){
 			snakeBlackRadioButton = false;
 			snakeDarkGreenRadioButton = false;
 			snakeGrayRadioButton = false;
-			snakePinkRadioButton = false;
+			snakeDarkOliveRadioButton = false;
 			snakeColor = C::white;
 		}
 		// snakeGrayRadioButton check
@@ -65,17 +65,17 @@ int MainShopWindow::Update(){
 			snakeWhiteRadioButton = false;
 			snakeBlackRadioButton = false;
 			snakeDarkGreenRadioButton = false;
-			snakePinkRadioButton = false;
+			snakeDarkOliveRadioButton = false;
 			snakeColor = C::gray;
 		}
-		// snakePinkRadioButton check
+		// snakeDarkOliveRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 25, C::cellSize * 13, C::size, C::size })) {
-			snakePinkRadioButton = true;
+			snakeDarkOliveRadioButton = true;
 			snakeGrayRadioButton = false;
 			snakeWhiteRadioButton = false;
 			snakeBlackRadioButton = false;
 			snakeDarkGreenRadioButton = false;
-			snakeColor = C::pink;
+			snakeColor = C::darkOlive;
 		}
 
 		// fieldGreenRadioButton check
@@ -84,7 +84,7 @@ int MainShopWindow::Update(){
 			fieldBlackRadioButton = false;
 			fieldWhiteRadioButton = false;
 			fieldGrayRadioButton = false;
-			fieldPurpleRadioButton = false;
+			fieldOliveRadioButton = false;
 			fieldColor = C::green;
 			borderColor = C::darkGreen;
 		}
@@ -94,7 +94,7 @@ int MainShopWindow::Update(){
 			fieldGreenRadioButton = false;
 			fieldWhiteRadioButton = false;
 			fieldGrayRadioButton = false;
-			fieldPurpleRadioButton = false;
+			fieldOliveRadioButton = false;
 			fieldColor = C::fieldBlack;
 		}
 		// fieldWhiteRadioButton check
@@ -103,7 +103,7 @@ int MainShopWindow::Update(){
 			fieldBlackRadioButton = false;
 			fieldGreenRadioButton = false;
 			fieldGrayRadioButton = false;
-			fieldPurpleRadioButton = false;
+			fieldOliveRadioButton = false;
 			fieldColor = C::textWhite;
 			borderColor = C::black;
 		}
@@ -113,18 +113,19 @@ int MainShopWindow::Update(){
 			fieldWhiteRadioButton = false;
 			fieldBlackRadioButton = false;
 			fieldGreenRadioButton = false;
-			fieldPurpleRadioButton = false;
+			fieldOliveRadioButton = false;
 			fieldColor = C::fieldGray;
 			borderColor = C::black;
 		}
-		// fieldPurpleRadioButton check
+		// fieldOliveRadioButton check
 		else if (CheckCollisionPointRec(GetMousePosition(), { C::cellSize * 25, C::cellSize * 21, C::size, C::size })) {
-			fieldPurpleRadioButton = true;
+			fieldOliveRadioButton = true;
 			fieldGrayRadioButton = false;
 			fieldWhiteRadioButton = false;
 			fieldBlackRadioButton = false;
 			fieldGreenRadioButton = false;
-			fieldColor = C::fieldPurple;
+			fieldColor = C::fieldOlive;
+			borderColor = C::buttonDarkBlack;
 		}
 	}
 
@@ -133,7 +134,7 @@ int MainShopWindow::Update(){
 
 			CloseWindow();
 
-			startTheDifficultWindow();                // TODO
+			startTheDifficultWindow();                
 			return false;
 		}
 	}
@@ -165,8 +166,8 @@ static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
 	DrawRectangle(C::cellSize * 20, C::cellSize * 13, C::size, C::size, snakeGrayRadioButton ? GREEN : BLACK);
 	DrawRectangle(C::cellSize * 19.3, C::cellSize * 10, C::size * 3, C::size * 3, C::gray);
 
-	DrawRectangle(C::cellSize * 25, C::cellSize * 13, C::size, C::size, snakePinkRadioButton ? GREEN : BLACK);
-	DrawRectangle(C::cellSize * 24.3, C::cellSize * 10, C::size * 3, C::size * 3, C::pink);
+	DrawRectangle(C::cellSize * 25, C::cellSize * 13, C::size, C::size, snakeDarkOliveRadioButton ? GREEN : BLACK);
+	DrawRectangle(C::cellSize * 24.3, C::cellSize * 10, C::size * 3, C::size * 3, C::darkOlive);
 
 	// Drawing field color radiobuttons
 	DrawRectangle(C::cellSize * 5, C::cellSize * 21, C::size, C::size, fieldGreenRadioButton ? GREEN : BLACK);
@@ -181,8 +182,8 @@ static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
 	DrawRectangle(C::cellSize * 20, C::cellSize * 21, C::size, C::size, fieldGrayRadioButton ? GREEN : BLACK);
 	DrawRectangle(C::cellSize * 19.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldGray);
 
-	DrawRectangle(C::cellSize * 25, C::cellSize * 21, C::size, C::size, fieldPurpleRadioButton ? GREEN : BLACK);
-	DrawRectangle(C::cellSize * 24.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldPurple);
+	DrawRectangle(C::cellSize * 25, C::cellSize * 21, C::size, C::size, fieldOliveRadioButton ? GREEN : BLACK);
+	DrawRectangle(C::cellSize * 24.3, C::cellSize * 18, C::size * 3, C::size * 3, C::fieldOlive);
 
 	// Drawing line around colors
 	float x = 4.3;

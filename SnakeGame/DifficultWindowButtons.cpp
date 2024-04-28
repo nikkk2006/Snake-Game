@@ -7,7 +7,12 @@ ButtonEasyDifficult::ButtonEasyDifficult() : width(MyConstants::cellSize * 6), h
 }
 
 void ButtonEasyDifficult::Draw() {
-	DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	if (CheckCollisionPointRec(GetMousePosition(), button)) {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	}
+	else {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
+	}
 	DrawText(text, button.x + 40, button.y + 15, 30, MyConstants::textWhite);
 }
 
@@ -17,7 +22,12 @@ ButtonMediumDifficult::ButtonMediumDifficult() : width(MyConstants::cellSize * 6
 }
 
 void ButtonMediumDifficult::Draw() {
-	DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	if (CheckCollisionPointRec(GetMousePosition(), button)) {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	}
+	else {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
+	}
 	DrawText(text, button.x + 30, button.y + 15, 30, MyConstants::textWhite);
 }
 
@@ -27,6 +37,11 @@ ButtonHardDifficult::ButtonHardDifficult() : width(MyConstants::cellSize * 6), h
 }
 
 void ButtonHardDifficult::Draw() {
-	DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	if (CheckCollisionPointRec(GetMousePosition(), button)) {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	}
+	else {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
+	}
 	DrawText(text, button.x + 40, button.y + 15, 30, MyConstants::textWhite);
 }

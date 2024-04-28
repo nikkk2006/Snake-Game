@@ -22,13 +22,13 @@ public:
 	bool snakeBlackRadioButton;
 	bool snakeWhiteRadioButton;
 	bool snakeGrayRadioButton;
-	bool snakePinkRadioButton;
+	bool snakeDarkOliveRadioButton;
 	// Field radiobuttons pressed check
 	bool fieldGreenRadioButton;
 	bool fieldBlackRadioButton;
 	bool fieldWhiteRadioButton;
 	bool fieldGrayRadioButton;
-	bool fieldPurpleRadioButton;
+	bool fieldOliveRadioButton;
 
 	MainShopWindow();
 	~MainShopWindow();

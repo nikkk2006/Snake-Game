@@ -13,7 +13,12 @@ Button::Button(const char* text, const float y, const float textX) :
 }
 
 void Button::Draw() {
-	DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	if (CheckCollisionPointRec(GetMousePosition(), button)) {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+	}
+	else {
+		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
+	}
 	DrawText(m_text, button.x + m_textX, button.y + 30, 30, C::textWhite);
 }
 
