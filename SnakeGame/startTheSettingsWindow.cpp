@@ -9,7 +9,7 @@ void startTheSettingsWindow() {
 		BeginDrawing();
 
 		// Updating
-		//window.Update();
+		window.Update();
 
 		// Drawing
 		window.Draw();

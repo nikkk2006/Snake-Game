@@ -13,7 +13,7 @@
 
 int startTheMainMenu();
 
-void startTheMainWinow();
+void startTheMainWindow();
 
 void startTheDifficultWindow();
 

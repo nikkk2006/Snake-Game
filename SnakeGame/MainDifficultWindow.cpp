@@ -21,7 +21,7 @@ bool MainDifficultWindow::Update(){
 			easyDifficult.buttonPressed = true;
 
 			CloseWindow();
-			startTheMainWinow();
+			startTheMainWindow();
 			return false;
 		}
 	}
@@ -36,7 +36,7 @@ bool MainDifficultWindow::Update(){
 			mediumDifficult.buttonPressed = true;
 
 			CloseWindow();
-			startTheMainWinow();
+			startTheMainWindow();
 			return false;
 		}
 	}
@@ -50,7 +50,7 @@ bool MainDifficultWindow::Update(){
 			hardDifficult.buttonPressed = true;
 
 			CloseWindow();
-			startTheMainWinow();
+			startTheMainWindow();
 			return false;
 		}
 	}

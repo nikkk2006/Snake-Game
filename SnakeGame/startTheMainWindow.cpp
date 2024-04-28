@@ -1,7 +1,7 @@
 #include "startWindowsFunctions.h"
 
 
-void startTheMainWinow() {
+void startTheMainWindow() {
 
 	mainWindow window = mainWindow();
 

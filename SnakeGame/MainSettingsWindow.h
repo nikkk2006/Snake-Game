@@ -12,12 +12,13 @@ public:
 	int screenHeight;
 	const char* title;
 
-	// Buttons
-
+	// radiobuttons for sounds
+	bool soundsOnRadioButton;
+	bool soundsOffRadioButton;
 
 	MainSettingsWindow();
 	~MainSettingsWindow();
-	int Update();
+	void Update();
 	void Draw();
 };
 

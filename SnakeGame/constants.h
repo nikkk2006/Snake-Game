@@ -6,7 +6,6 @@
 
 namespace MyConstants {
 	const Color red = { 191, 42, 57, 255 };
-	const Color brown = { 51, 34, 24, 255 };
 
 	// colors for snake
 	const Color darkGreen = { 43, 51, 24, 255 };
