@@ -5,7 +5,7 @@ void startTheSettingsWindow() {
 
 	MainSettingsWindow window = MainSettingsWindow();
 
-	while (WindowShouldClose() == false) {
+	while (window.Update() == false && WindowShouldClose() == false) {
 		BeginDrawing();
 
 		// Updating

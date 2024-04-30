@@ -3,6 +3,8 @@
 
 
 #include "constants.h"
+#include "MainMenuButtons.h"
+#include "startWindowsFunctions.h"
 namespace C = MyConstants;
 
 
@@ -16,9 +18,12 @@ public:
 	bool soundsOnRadioButton;
 	bool soundsOffRadioButton;
 
+	// Buttons
+	buttonShop shopButton{"shop", 20.0};
+
 	MainSettingsWindow();
 	~MainSettingsWindow();
-	void Update();
+	bool Update();
 	void Draw();
 };
 
