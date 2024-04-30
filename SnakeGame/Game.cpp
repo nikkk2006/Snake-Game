@@ -1,17 +1,23 @@
 #include "Game.h"
 
 
+bool isAudioPlay = true;
+
 Game::Game(){
-	InitAudioDevice();
-	eatSound = LoadSound("Sounds/eat.mp3");
-	wallSound = LoadSound("Sounds/wall.mp3");
+	if (isAudioPlay) {
+		InitAudioDevice();
+		eatSound = LoadSound("Sounds/eat.mp3");
+		wallSound = LoadSound("Sounds/wall.mp3");
+	}
 	readHighScore();
 }
 
 Game::~Game(){
-	UnloadSound(eatSound);
-	UnloadSound(wallSound);
-	CloseAudioDevice();
+	if (isAudioPlay) {
+		UnloadSound(eatSound);
+		UnloadSound(wallSound);
+		CloseAudioDevice();
+	}
 }
 
 void Game::Draw(){
@@ -35,7 +41,9 @@ void Game::checkCollisionWithFood(){
 		food.position = food.generateRandomPos(snake.body);
 		snake.addSegment = true;
 		score++;
-		PlaySound(eatSound);
+
+		if(isAudioPlay)
+			PlaySound(eatSound);
 	}
 }
 
@@ -99,5 +107,7 @@ void Game::GameOver(){
 		saveHighScore();
 	}
 	score = 0;
-	PlaySound(wallSound);
+
+	if(isAudioPlay)
+		PlaySound(wallSound);
 }
