@@ -29,6 +29,12 @@ public:
 	bool fieldWhiteRadioButton;
 	bool fieldGrayRadioButton;
 	bool fieldOliveRadioButton;
+	// Apple radiobuttons pressed check
+	bool appleRedRadioButton;
+	bool appleBlackRadioButton;
+	bool appleWhiteRadioButton;
+	bool appleGrayRadioButton;
+	bool appleDarkOliveRadioButton;
 
 	MainShopWindow();
 	~MainShopWindow();

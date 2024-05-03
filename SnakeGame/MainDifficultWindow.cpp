@@ -44,6 +44,7 @@ bool MainDifficultWindow::Update(){
 		mediumDifficult.buttonPressed = false;
 	}
 
+	// Button hard difficult
 	if (CheckCollisionPointRec(GetMousePosition(), hardDifficult.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			snakeSpeed = SnakeSpeed::HARD;
