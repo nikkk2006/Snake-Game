@@ -3,8 +3,8 @@
 
 float snakeSpeed = SnakeSpeed::EASY;
 
-MainDifficultWindow::MainDifficultWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
-											 screenHeight(2 * C::offset + C::cellSize * C::cellCount)
+MainDifficultWindow::MainDifficultWindow() : screenWidth(2 * MyConstants::offset + MyConstants::cellSize * MyConstants::cellCount),
+											 screenHeight(2 * MyConstants::offset + MyConstants::cellSize * MyConstants::cellCount)
 {
 }
 
@@ -67,7 +67,7 @@ void MainDifficultWindow::Draw(){
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
+static_cast<float>(screenHeight - 10) }, 4, MyConstants::textYellow);
 	DrawText("choose the difficult", MyConstants::cellSize * 9, 10, 40, MyConstants::textYellow);
 
 	easyDifficult.Draw();

@@ -1,8 +1,8 @@
 #include "startWindowsFunctions.h"
 
 
-mainMenu::mainMenu() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
-					   screenHeight(2 * C::offset + C::cellSize * C::cellCount),
+mainMenu::mainMenu() : screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
+					   screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
 					   title("SnakeGame")
 {
 	InitWindow(screenWidth, screenHeight, title);
@@ -20,7 +20,7 @@ void mainMenu::Draw(){
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, C::textYellow);
+static_cast<float>(screenHeight - 10) }, 4, MyC::textYellow);
 	DrawText("Snake Game", MyConstants::cellSize * 11, 10, 40, MyConstants::textYellow);
 	buttonStart.Draw();
 	buttonShop.Draw();

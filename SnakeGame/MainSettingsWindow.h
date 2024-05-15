@@ -5,7 +5,7 @@
 #include "constants.h"
 #include "MainMenuButtons.h"
 #include "startWindowsFunctions.h"
-namespace C = MyConstants;
+namespace MyC = MyConstants;
 
 
 class MainSettingsWindow {

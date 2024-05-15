@@ -48,9 +48,6 @@
     <ClCompile Include="MainDifficultWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ButtonBack.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="startTheDifficultWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

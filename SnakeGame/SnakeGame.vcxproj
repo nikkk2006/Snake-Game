@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ButtonBack.cpp" />
     <ClCompile Include="DifficultWindowButtons.cpp" />
     <ClCompile Include="elementInDeque.cpp" />
     <ClCompile Include="eventTriggered.cpp" />

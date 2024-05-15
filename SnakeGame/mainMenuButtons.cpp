@@ -19,7 +19,7 @@ void Button::Draw() {
 	else {
 		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
 	}
-	DrawText(m_text, button.x + m_textX, button.y + 30, 30, C::textWhite);
+	DrawText(m_text, button.x + m_textX, button.y + 30, 30, MyConstants::textWhite);
 }
 
 

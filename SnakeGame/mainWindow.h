@@ -5,9 +5,8 @@
 #include <string>
 #include "raylib.h"
 #include "Game.h"
-
 #include "constants.h"
-namespace C = MyConstants;
+namespace MyC = MyConstants;
 
 extern float snakeSpeed;
 

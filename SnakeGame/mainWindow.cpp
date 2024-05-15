@@ -5,25 +5,25 @@ Color fieldColor = MyConstants::black;
 Color borderColor = MyConstants::textYellow;
 
 
-mainWindow::mainWindow() : screenWidth(2 * C::offset + C::cellSize * C::cellCount),
-						   screenHeight(2 * C::offset + C::cellSize * C::cellCount)
+mainWindow::mainWindow() : screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
+						   screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount)
 {
 }
 
 void mainWindow::Draw() {
 	ClearBackground(fieldColor);
 
-	DrawRectangleLinesEx(Rectangle{ static_cast<float>(C::offset - 5),
-		static_cast<float>(C::offset - 5),
-		static_cast<float>(C::cellSize* C::cellCount + 10),
-		static_cast<float>(C::cellSize * C::cellCount + 10)}, 5, borderColor);
+	DrawRectangleLinesEx(Rectangle{ static_cast<float>(MyC::offset - 5),
+		static_cast<float>(MyC::offset - 5),
+		static_cast<float>(MyC::cellSize* MyC::cellCount + 10),
+		static_cast<float>(MyC::cellSize * MyC::cellCount + 10)}, 5, borderColor);
 
-	DrawText("Retro Snake", C::offset - 5, 20, 40, borderColor);
-	DrawText(TextFormat("Score: %i", game.score), C::offset - 5, C::offset + C::cellSize * C::cellCount + 10, 40, borderColor);
+	DrawText("Retro Snake", MyC::offset - 5, 20, 40, borderColor);
+	DrawText(TextFormat("Score: %i", game.score), MyC::offset - 5, MyC::offset + MyC::cellSize * MyC::cellCount + 10, 40, borderColor);
 
 	std::string strHighScore = std::to_string(game.highScore);
 	int scoreWidth = MeasureText(strHighScore.c_str(), 40);  
-	DrawText(strHighScore.c_str(), C::offset + C::cellSize * C::cellCount - scoreWidth + 5, C::offset + C::cellSize * C::cellCount + 10, 40, borderColor);
+	DrawText(strHighScore.c_str(), MyC::offset + MyC::cellSize * MyC::cellCount - scoreWidth + 5, MyC::offset + MyC::cellSize * MyC::cellCount + 10, 40, borderColor);
 
 	game.Draw();
 

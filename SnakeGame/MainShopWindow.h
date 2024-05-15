@@ -5,7 +5,10 @@
 #include "constants.h"
 #include "difficultWindowButtons.h"
 #include "startWindowsFunctions.h"
-namespace C = MyConstants;
+namespace MyC = MyConstants;
+
+
+
 
 
 class MainShopWindow {
