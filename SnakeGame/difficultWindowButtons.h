@@ -7,52 +7,19 @@
 #include "MainMenuButtons.h"
 
 
-class ButtonEasyDifficult{
+class ButtonEasyDifficult : public Button{
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	ButtonEasyDifficult();
-	void Draw();
+	ButtonEasyDifficult(const char* text = "easy", const float x = 6, const float y = 3, const float width = 6, const float height = 3, const float textX = 50);
 };
 
-class ButtonMediumDifficult {
+class ButtonMediumDifficult : public Button {
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	ButtonMediumDifficult();
-	void Draw();
+	ButtonMediumDifficult(const char* text = "medium", const float x = 13, const float y = 3, const float width = 6, const float height = 3, const float textX = 40);
 };
 
-class ButtonHardDifficult {
+class ButtonHardDifficult : public Button{
 public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	ButtonHardDifficult();
-	void Draw();
-};
-
-class ButtonBack {
-public:
-	bool buttonPressed;
-	const int width;
-	const int height;
-	const char* text;
-	Rectangle button;
-
-	ButtonBack();
-	void Draw();
+	ButtonHardDifficult(const char* text = "hard", const float x = 20, const float y = 3, const float width = 6, const float height = 3, const float textX = 50);
 };
 
 #endif // !DIFFICULT_WINDOW_BUTTONS_H

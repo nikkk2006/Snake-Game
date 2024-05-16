@@ -1,16 +1,16 @@
 #include "mainMenuButtons.h"
 
 
-Button::Button(const char* text, const float x, const float y, const float textX) :
-	width(MyConstants::cellSize * 10),
-	height(MyConstants::cellSize * 3),
+Button::Button(const char* text, const float x, const float y, const float width, const float height, const float textX) :
+	m_width(MyConstants::cellSize * width),
+	m_height(MyConstants::cellSize * height),
 	m_text(text),
 	m_textX(textX),
 	m_x(x),
 	m_y(y),
 	buttonPressed(false)
 {
-	button = { static_cast<float>(MyConstants::cellSize * m_x), static_cast<float>(MyConstants::cellSize * m_y), static_cast<float>(width), static_cast<float>(height) };
+	button = { static_cast<float>(MyConstants::cellSize * m_x), static_cast<float>(MyConstants::cellSize * m_y), static_cast<float>(m_width), static_cast<float>(m_height) };
 }
 
 void Button::Draw() {
@@ -24,10 +24,10 @@ void Button::Draw() {
 }
 
 
-buttonStartTheGame::buttonStartTheGame(const char* text, const float x, const float y, const float textX) : Button(text, x, y, textX) {}
+buttonStartTheGame::buttonStartTheGame(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
-buttonSettings::buttonSettings(const char* text, const float x, const float y, const float textX) : Button(text, x, y, textX) {}
+buttonSettings::buttonSettings(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
-buttonShop::buttonShop(const char* text, const float x, const float y, const float textX) : Button(text, x, y, textX) {}
+buttonShop::buttonShop(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
-buttonExit::buttonExit(const char* text, const float x, const float y, const float textX) : Button(text, x, y, textX) {}
+buttonExit::buttonExit(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
