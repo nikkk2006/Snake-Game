@@ -19,7 +19,7 @@ public:
 	bool soundsOffRadioButton;
 
 	// Buttons
-	buttonShop shopButton{"shop", 20.0};
+	buttonShop shopButton{"shop", 10.0, 17.0, 10.0, 3.0};
 
 	MainSettingsWindow();
 	~MainSettingsWindow();

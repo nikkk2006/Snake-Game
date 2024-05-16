@@ -7,8 +7,7 @@ Button::Button(const char* text, const float x, const float y, const float width
 	m_text(text),
 	m_textX(textX),
 	m_x(x),
-	m_y(y),
-	buttonPressed(false)
+	m_y(y)
 {
 	button = { static_cast<float>(MyConstants::cellSize * m_x), static_cast<float>(MyConstants::cellSize * m_y), static_cast<float>(m_width), static_cast<float>(m_height) };
 }

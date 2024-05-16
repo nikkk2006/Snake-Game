@@ -9,7 +9,6 @@ namespace MyC = MyConstants;
 
 class Button {
 public:
-	bool buttonPressed;
 	const int m_width;
 	const int m_height;
 	const char* m_text;

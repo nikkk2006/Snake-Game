@@ -18,46 +18,35 @@ bool MainDifficultWindow::Update(){
 	if (CheckCollisionPointRec(GetMousePosition(), easyDifficult.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			snakeSpeed = SnakeSpeed::EASY;
-			easyDifficult.buttonPressed = true;
 
 			CloseWindow();
 			startTheMainWindow();
 			return false;
 		}
-	}
-	else {
-		easyDifficult.buttonPressed = false;
 	}
 
 	// Button medium difficult
 	if (CheckCollisionPointRec(GetMousePosition(), mediumDifficult.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			snakeSpeed = SnakeSpeed::MEDIUM;
-			mediumDifficult.buttonPressed = true;
 
 			CloseWindow();
 			startTheMainWindow();
 			return false;
 		}
-	}
-	else {
-		mediumDifficult.buttonPressed = false;
 	}
 
 	// Button hard difficult
 	if (CheckCollisionPointRec(GetMousePosition(), hardDifficult.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 			snakeSpeed = SnakeSpeed::HARD;
-			hardDifficult.buttonPressed = true;
 
 			CloseWindow();
 			startTheMainWindow();
 			return false;
 		}
 	}
-	else {
-		hardDifficult.buttonPressed = false;
-	}
+
 	return true;
 }
 

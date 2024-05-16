@@ -18,7 +18,7 @@ public:
 	const char* title;
 
 	// Buttons
-	buttonStartTheGame startTheGame{ "start the game", 25.0, 35.0 };
+	buttonStartTheGame startTheGame{ "start the game", 10.0, 23.0, 10.0, 3.0 };
 
 	// Radio buttons pressed check
 	MyMapRB RadioButtonsFlags = {
