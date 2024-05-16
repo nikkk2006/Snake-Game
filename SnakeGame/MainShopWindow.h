@@ -2,13 +2,12 @@
 #define MAIN_SHOP_WINDOW
 
 
+#include <map>
+#include <string>
 #include "constants.h"
 #include "difficultWindowButtons.h"
 #include "startWindowsFunctions.h"
 namespace MyC = MyConstants;
-
-
-
 
 
 class MainShopWindow {
@@ -20,24 +19,26 @@ public:
 	// Buttons
 	buttonStartTheGame startTheGame{ "start the game", 25.0, 35.0 };
 
-	// Snake radiobuttons pressed check
-	bool snakeDarkGreenRadioButton;
-	bool snakeBlackRadioButton;
-	bool snakeWhiteRadioButton;
-	bool snakeGrayRadioButton;
-	bool snakeDarkOliveRadioButton;
-	// Field radiobuttons pressed check
-	bool fieldGreenRadioButton;
-	bool fieldBlackRadioButton;
-	bool fieldWhiteRadioButton;
-	bool fieldGrayRadioButton;
-	bool fieldOliveRadioButton;
-	// Apple radiobuttons pressed check
-	bool appleRedRadioButton;
-	bool appleBlackRadioButton;
-	bool appleWhiteRadioButton;
-	bool appleGrayRadioButton;
-	bool appleDarkOliveRadioButton;
+	// Radio buttons pressed check
+	std::map<std::string, bool> RadioButtonsFlags = {
+		{"snakeDarkGreenRadioButton", false},
+		{"snakeBlackRadioButton", false},
+		{"snakeWhiteRadioButton", true},
+		{"snakeGrayRadioButton", false},
+		{"snakeDarkOliveRadioButton", false},
+
+		{"fieldGreenRadioButton", false},
+		{"fieldBlackRadioButton", true},
+		{"fieldWhiteRadioButton", false},
+		{"fieldGrayRadioButton", false},
+		{"fieldOliveRadioButton", false},
+
+		{"appleRedRadioButton", true},
+		{"appleBlackRadioButton", false},
+		{"appleWhiteRadioButton", false},
+		{"appleGrayRadioButton", false},
+		{"appleDarkOliveRadioButton", false}
+	};
 
 	MainShopWindow();
 	~MainShopWindow();
