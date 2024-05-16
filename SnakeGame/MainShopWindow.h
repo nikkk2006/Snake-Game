@@ -8,6 +8,7 @@
 #include "difficultWindowButtons.h"
 #include "startWindowsFunctions.h"
 namespace MyC = MyConstants;
+using MyMapRB = std::map<std::string, bool>;
 
 
 class MainShopWindow {
@@ -20,7 +21,7 @@ public:
 	buttonStartTheGame startTheGame{ "start the game", 25.0, 35.0 };
 
 	// Radio buttons pressed check
-	std::map<std::string, bool> RadioButtonsFlags = {
+	MyMapRB RadioButtonsFlags = {
 		{"snakeDarkGreenRadioButton", false},
 		{"snakeBlackRadioButton", false},
 		{"snakeWhiteRadioButton", true},

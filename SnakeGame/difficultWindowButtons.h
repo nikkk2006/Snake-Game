@@ -4,9 +4,10 @@
 
 #include "raylib.h"
 #include "constants.h"
+#include "MainMenuButtons.h"
 
 
-class ButtonEasyDifficult {
+class ButtonEasyDifficult{
 public:
 	bool buttonPressed;
 	const int width;
