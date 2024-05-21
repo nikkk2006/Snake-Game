@@ -5,7 +5,10 @@ float snakeSpeed = SnakeSpeed::EASY;
 extern GameStates gameState;
 
 
-MainDifficultWindow::MainDifficultWindow(){}
+MainDifficultWindow::MainDifficultWindow() :
+	screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
+	screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount)
+{}
 
 MainDifficultWindow::~MainDifficultWindow(){
 	CloseWindow();
