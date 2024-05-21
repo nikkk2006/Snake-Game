@@ -3,15 +3,16 @@
 
 
 #include "raylib.h"
-#include "buttonEnums.h"
+#include "enums.h"
 #include "mainMenu.h"
 #include "mainWindow.h"
 #include "MainDifficultWindow.h"
 #include "MainShopWindow.h"
 #include "MainSettingsWindow.h"
 
+void startTheMainLoop();
 
-int startTheMainMenu();
+void startTheMainMenu();
 
 void startTheMainWindow();
 

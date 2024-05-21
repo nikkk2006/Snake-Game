@@ -1,19 +1,28 @@
 #include "startWindowsFunctions.h"
 
 
+extern bool isAudioPlay;
+extern GameStates gameState;
+
 void startTheSettingsWindow() {
 
 	MainSettingsWindow window = MainSettingsWindow();
 
-	while (window.Update() == false && WindowShouldClose() == false) {
+	while (!WindowShouldClose() && gameState == GameStates::SETTINGS) {
+
+
+		if (window.IsButtonBackPressed()) {
+			gameState = GameStates::MENU;
+		}
+
+		// Draw
 		BeginDrawing();
-
-		// Updating
-		window.Update();
-
-		// Drawing
 		window.Draw();
+
+		// Update
+		window.Update();
 
 		EndDrawing();
 	}
 }
+

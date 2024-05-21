@@ -1,18 +1,20 @@
 #include "startWindowsFunctions.h"
 
 
-int startTheMainMenu(){
+extern GameStates gameState;
+
+void startTheMainMenu(){
 
 	mainMenu menu = mainMenu();
 
-	while (!WindowShouldClose()) {
+	BeginDrawing();
 
-		// Drawing
-		menu.Draw();
+	// Drawing
+	menu.Draw();
 
-		if (menu.IsStartButtonPressed()) { return START; }
-		if (menu.IsStartShopButtonPressed()) { return SHOP; }
-		if (menu.IsStartExitButtonPressed()) { return EXIT; }
-		if (menu.IsStartSettingsButtonPressed()) { return SETTINGS; }
-	}
+	if (menu.IsStartButtonPressed()) {gameState = GameStates::START_DIFFICULT_WINDOW; }
+	else if (menu.IsStartShopButtonPressed()) { gameState = GameStates::SHOP; }
+	else if (menu.IsStartExitButtonPressed()) { gameState = GameStates::EXIT; }
+	else if (menu.IsStartSettingsButtonPressed()) { gameState = GameStates::SETTINGS; }	
+
 }

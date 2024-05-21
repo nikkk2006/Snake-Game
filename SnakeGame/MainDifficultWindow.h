@@ -17,10 +17,14 @@ public:
 	ButtonEasyDifficult easyDifficult;
 	ButtonMediumDifficult mediumDifficult;
 	ButtonHardDifficult hardDifficult;
+	buttonBack back{ "back", 10.0, 25.0, 10.0, 3.0, 125.0 };
 
 	MainDifficultWindow();
 	~MainDifficultWindow();
-	bool Update();
+	bool IsButtonEasyPressed();
+	bool IsButtonMediumPressed();
+	bool IsButtonHardPressed();
+	bool IsButtonBackPressed();
 	void Draw();
 };
 

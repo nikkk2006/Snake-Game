@@ -41,5 +41,10 @@ public:
 	buttonExit(const char* text = "exit", const float x = 10, const float y = 20.0, const float width = 10, const float height = 3, const float textX = 120.0);
 };
 
+class buttonBack : public Button {
+public:
+	buttonBack(const char* text = "back", const float x = 10, const float y = 20.0, const float width = 10, const float height = 3, const float textX = 120.0);
+};
+
 #endif // !MAIN_MENU_BUTTONS_H
 

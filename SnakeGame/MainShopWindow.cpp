@@ -5,6 +5,7 @@ extern Color snakeColor;
 extern Color fieldColor;
 extern Color borderColor;
 extern Color appleColor;
+extern GameStates gameState;
 
 
 // function that returns the radio button rectangle with values
@@ -171,12 +172,10 @@ int MainShopWindow::Update(){
 		}
 	}
 
-	if (CheckCollisionPointRec(GetMousePosition(), startTheGame.button)) {
+	if (CheckCollisionPointRec(GetMousePosition(), back.button)) {
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 
-			CloseWindow();
-
-			startTheDifficultWindow();                
+			gameState = GameStates::MENU;
 			return false;
 		}
 	}
@@ -265,5 +264,5 @@ static_cast<float>(screenHeight - 10) }, 4, MyC::textYellow);
 	}
 
 	// Drawing buttons
-	startTheGame.Draw();
+	back.Draw();
 }

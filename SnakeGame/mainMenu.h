@@ -5,7 +5,7 @@
 #include "raylib.h"
 #include "mainMenuButtons.h"
 #include "constants.h"
-#include "buttonEnums.h"
+#include "enums.h"
 
 
 class mainMenu{

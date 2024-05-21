@@ -142,13 +142,14 @@
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="startTheDifficultWindow.cpp" />
+    <ClCompile Include="startTheMainLoop.cpp" />
     <ClCompile Include="startTheMainMenu.cpp" />
     <ClCompile Include="startTheMainWindow.cpp" />
     <ClCompile Include="startTheSettingsWindow.cpp" />
     <ClCompile Include="startTheShopWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="buttonEnums.h" />
+    <ClInclude Include="enums.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="difficultWindowButtons.h" />
     <ClInclude Include="functions.h" />

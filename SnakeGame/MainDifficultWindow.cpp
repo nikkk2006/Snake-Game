@@ -2,52 +2,29 @@
 
 
 float snakeSpeed = SnakeSpeed::EASY;
+extern GameStates gameState;
 
-MainDifficultWindow::MainDifficultWindow() : screenWidth(2 * MyConstants::offset + MyConstants::cellSize * MyConstants::cellCount),
-											 screenHeight(2 * MyConstants::offset + MyConstants::cellSize * MyConstants::cellCount)
-{
-}
+
+MainDifficultWindow::MainDifficultWindow(){}
 
 MainDifficultWindow::~MainDifficultWindow(){
 	CloseWindow();
 }
 
-bool MainDifficultWindow::Update(){
+bool MainDifficultWindow::IsButtonEasyPressed(){
+	return CheckCollisionPointRec(GetMousePosition(), easyDifficult.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
 
-	// Button easy difficult
-	if (CheckCollisionPointRec(GetMousePosition(), easyDifficult.button)) {
-		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-			snakeSpeed = SnakeSpeed::EASY;
+bool MainDifficultWindow::IsButtonMediumPressed() {
+	return CheckCollisionPointRec(GetMousePosition(), mediumDifficult.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
 
-			CloseWindow();
-			startTheMainWindow();
-			return false;
-		}
-	}
+bool MainDifficultWindow::IsButtonHardPressed() {
+	return CheckCollisionPointRec(GetMousePosition(), hardDifficult.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
 
-	// Button medium difficult
-	if (CheckCollisionPointRec(GetMousePosition(), mediumDifficult.button)) {
-		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-			snakeSpeed = SnakeSpeed::MEDIUM;
-
-			CloseWindow();
-			startTheMainWindow();
-			return false;
-		}
-	}
-
-	// Button hard difficult
-	if (CheckCollisionPointRec(GetMousePosition(), hardDifficult.button)) {
-		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-			snakeSpeed = SnakeSpeed::HARD;
-
-			CloseWindow();
-			startTheMainWindow();
-			return false;
-		}
-	}
-
-	return true;
+bool MainDifficultWindow::IsButtonBackPressed() {
+	return CheckCollisionPointRec(GetMousePosition(), back.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }
 
 void MainDifficultWindow::Draw(){
@@ -62,4 +39,5 @@ static_cast<float>(screenHeight - 10) }, 4, MyConstants::textYellow);
 	easyDifficult.Draw();
 	mediumDifficult.Draw();
 	hardDifficult.Draw();
+	back.Draw();
 }

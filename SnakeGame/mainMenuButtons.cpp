@@ -30,3 +30,5 @@ buttonSettings::buttonSettings(const char* text, const float x, const float y, c
 buttonShop::buttonShop(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
 buttonExit::buttonExit(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
+
+buttonBack::buttonBack(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}

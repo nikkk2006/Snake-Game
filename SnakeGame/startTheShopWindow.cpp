@@ -5,15 +5,14 @@ void startTheShopWindow() {
 	
 	MainShopWindow window = MainShopWindow();
 
-	while (window.Update() && WindowShouldClose() == false) {
-		BeginDrawing();
+	BeginDrawing();
 
-		// Updating
-		window.Update();
+	// Updating
+	window.Update();
 
-		// Drawing
-		window.Draw();
+	// Drawing
+	window.Draw();
 
-		EndDrawing();
-	}
+	EndDrawing();
+
 }

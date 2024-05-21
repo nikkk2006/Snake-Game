@@ -19,12 +19,15 @@ public:
 	bool soundsOffRadioButton;
 
 	// Buttons
-	buttonShop shopButton{"shop", 10.0, 17.0, 10.0, 3.0};
+	buttonBack back;
 
 	MainSettingsWindow();
 	~MainSettingsWindow();
-	bool Update();
+	bool IsOnRadioButtonPressed();
+	bool IsOffRadioButtonPressed();
+	bool IsButtonBackPressed();
 	void Draw();
+	void Update();
 };
 
 #endif // !MAIN_SETTINGS_WINDOW_H

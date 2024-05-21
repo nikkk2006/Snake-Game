@@ -1,19 +1,33 @@
 #include "startWindowsFunctions.h"
 
 
+extern GameStates gameState;
+
 void startTheDifficultWindow(){
 
 	MainDifficultWindow window = MainDifficultWindow();
 
-	while (window.Update() && WindowShouldClose() == false) {
-		BeginDrawing();
+	BeginDrawing();
 
-		// Updating
-		window.Update();
+	// Drawing
+	window.Draw();
 
-		// Drawing
-		window.Draw();
-
-		EndDrawing();
+	if (window.IsButtonEasyPressed()) {
+		snakeSpeed = SnakeSpeed::EASY;
+		gameState = GameStates::START_THE_GAME;
 	}
+	else if (window.IsButtonMediumPressed()) {
+		snakeSpeed = SnakeSpeed::MEDIUM;
+		gameState = GameStates::START_THE_GAME;
+	}
+	else if (window.IsButtonHardPressed()) {
+		snakeSpeed = SnakeSpeed::HARD;
+		gameState = GameStates::START_THE_GAME;
+	}
+
+	if (window.IsButtonBackPressed()) {
+		gameState = GameStates::MENU;
+	}
+
+	EndDrawing();
 }
