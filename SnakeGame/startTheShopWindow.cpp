@@ -1,18 +1,24 @@
 #include "startWindowsFunctions.h"
 
 
+extern GameStates gameState;
+
 void startTheShopWindow() {
 	
 	MainShopWindow window = MainShopWindow();
 
-	BeginDrawing();
+	while (!WindowShouldClose() && gameState == GameStates::SHOP) {
+		if (window.IsButtonBackPressed()) {
+			gameState = GameStates::MENU;
+		}
 
-	// Updating
-	window.Update();
+		window.Update();
 
-	// Drawing
-	window.Draw();
+		BeginDrawing();
 
-	EndDrawing();
+		// Drawing
+		window.Draw();
 
+		EndDrawing();
+	}
 }

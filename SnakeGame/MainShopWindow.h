@@ -18,7 +18,7 @@ public:
 	const char* title;
 
 	// Buttons
-	buttonBack back{"back", 10.0, 25.0, 10.0, 3.0, 125.0};
+	buttonBack back;
 
 	// Radio buttons pressed check
 	MyMapRB RadioButtonsFlags = {
@@ -43,7 +43,8 @@ public:
 
 	MainShopWindow();
 	~MainShopWindow();
-	int Update();
+	bool IsButtonBackPressed();
+	void Update();
 	void Draw();
 };
 #endif // !MAIN_SHOP_WINDOW

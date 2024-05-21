@@ -13,6 +13,11 @@ Rectangle createRectangle(const int x, const int y) {
 	return { (float)MyC::cellSize * x, (float)MyC::cellSize * y, MyC::size, MyC::size };
 }
 
+// function that return true if any radioButton pressed
+bool IsRadioButtonPressed(Rectangle coordinates) {
+	return CheckCollisionPointRec(GetMousePosition(), coordinates) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
+
 
 MainShopWindow::MainShopWindow() :
 	screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
@@ -23,14 +28,17 @@ MainShopWindow::~MainShopWindow(){
 	CloseWindow();
 }
 
-int MainShopWindow::Update(){
+bool MainShopWindow::IsButtonBackPressed(){
+	return CheckCollisionPointRec(GetMousePosition(), back.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
+
+void MainShopWindow::Update(){
 	// radioButtons press check
 
 	if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-		std::string lastPressed;
-
+		
 		// snakeDarkGreenRadioButton check
-		if (CheckCollisionPointRec(GetMousePosition(), createRectangle(5, 9))) {
+		if (IsRadioButtonPressed(createRectangle(5, 9))) {
 			RadioButtonsFlags["snakeDarkGreenRadioButton"] = true;
 			RadioButtonsFlags["snakeBlackRadioButton"] = false;
 			RadioButtonsFlags["snakeWhiteRadioButton"] = false;
@@ -39,7 +47,7 @@ int MainShopWindow::Update(){
 			snakeColor = MyC::darkGreen;
 		}
 		// snakeBlackRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(10, 9))) {			
+		if (IsRadioButtonPressed(createRectangle(10, 9))) {
 			RadioButtonsFlags["snakeBlackRadioButton"] = true;
 			RadioButtonsFlags["snakeDarkGreenRadioButton"] = false;
 			RadioButtonsFlags["snakeWhiteRadioButton"] = false;
@@ -48,7 +56,7 @@ int MainShopWindow::Update(){
 			snakeColor = MyC::black;
 		}
 		// snakeWhiteRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(15, 9))) {
+		if (IsRadioButtonPressed(createRectangle(15, 9))) {
 			RadioButtonsFlags["snakeWhiteRadioButton"] = true;
 			RadioButtonsFlags["snakeBlackRadioButton"] = false;
 			RadioButtonsFlags["snakeDarkGreenRadioButton"] = false;
@@ -57,7 +65,7 @@ int MainShopWindow::Update(){
 			snakeColor = MyC::white;
 		}
 		// snakeGrayRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(20, 9))) {				
+		if (IsRadioButtonPressed(createRectangle(20, 9))) {
 			RadioButtonsFlags["snakeGrayRadioButton"] = true;
 			RadioButtonsFlags["snakeWhiteRadioButton"] = false;
 			RadioButtonsFlags["snakeBlackRadioButton"] = false;
@@ -66,7 +74,7 @@ int MainShopWindow::Update(){
 			snakeColor = MyC::gray;
 		}
 		// snakeDarkOliveRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(25, 9))) {
+		if (IsRadioButtonPressed(createRectangle(25, 9))) {
 			RadioButtonsFlags["snakeDarkOliveRadioButton"] = true;
 			RadioButtonsFlags["snakeGrayRadioButton"] = false;
 			RadioButtonsFlags["snakeWhiteRadioButton"] = false;
@@ -76,7 +84,7 @@ int MainShopWindow::Update(){
 		}
 
 		// fieldGreenRadioButton check
-		if (CheckCollisionPointRec(GetMousePosition(), createRectangle(5, 15))) {
+		if (IsRadioButtonPressed(createRectangle(5, 15))) {
 			RadioButtonsFlags["fieldGreenRadioButton"] = true;
 			RadioButtonsFlags["fieldBlackRadioButton"] = false;
 			RadioButtonsFlags["fieldWhiteRadioButton"] = false;
@@ -86,7 +94,7 @@ int MainShopWindow::Update(){
 			borderColor = MyC::darkGreen;
 		}
 		// fieldBlackRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(10, 15))) {
+		if (IsRadioButtonPressed(createRectangle(10, 15))) {
 			RadioButtonsFlags["fieldBlackRadioButton"] = true;
 			RadioButtonsFlags["fieldGreenRadioButton"] = false;
 			RadioButtonsFlags["fieldWhiteRadioButton"] = false;
@@ -95,7 +103,7 @@ int MainShopWindow::Update(){
 			fieldColor = MyC::fieldBlack;
 		}
 		// fieldWhiteRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(15, 15))) {
+		if (IsRadioButtonPressed(createRectangle(15, 15))) {
 			RadioButtonsFlags["fieldWhiteRadioButton"] = true;
 			RadioButtonsFlags["fieldBlackRadioButton"] = false;
 			RadioButtonsFlags["fieldGreenRadioButton"] = false;
@@ -105,7 +113,7 @@ int MainShopWindow::Update(){
 			borderColor = MyC::black;
 		}
 		// fieldGrayRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(20, 15))) {
+		if (IsRadioButtonPressed(createRectangle(20, 15))) {
 			RadioButtonsFlags["fieldGrayRadioButton"] = true;
 			RadioButtonsFlags["fieldWhiteRadioButton"] = false;
 			RadioButtonsFlags["fieldBlackRadioButton"] = false;
@@ -115,7 +123,7 @@ int MainShopWindow::Update(){
 			borderColor = MyC::black;
 		}
 		// fieldOliveRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(25, 15))) {
+		else if (IsRadioButtonPressed(createRectangle(25, 15))) {
 			RadioButtonsFlags["fieldOliveRadioButton"] = true;
 			RadioButtonsFlags["fieldGrayRadioButton"] = false;
 			RadioButtonsFlags["fieldWhiteRadioButton"] = false;
@@ -126,7 +134,7 @@ int MainShopWindow::Update(){
 		}
 
 		// appleRedRadioButton check
-		if (CheckCollisionPointRec(GetMousePosition(), createRectangle(5, 21))) {
+		if (IsRadioButtonPressed(createRectangle(5, 21))) {
 			RadioButtonsFlags["appleRedRadioButton"] = true;
 			RadioButtonsFlags["appleBlackRadioButton"] = false;
 			RadioButtonsFlags["appleWhiteRadioButton"] = false;
@@ -135,7 +143,7 @@ int MainShopWindow::Update(){
 			appleColor = MyC::red;
 		}
 		// appleBlackRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(10, 21))) {
+		else if (IsRadioButtonPressed(createRectangle(10, 21))) {
 			RadioButtonsFlags["appleBlackRadioButton"] = true;
 			RadioButtonsFlags["appleRedRadioButton"] = false;
 			RadioButtonsFlags["appleWhiteRadioButton"] = false;
@@ -144,7 +152,7 @@ int MainShopWindow::Update(){
 			appleColor = MyC::black;
 		}
 		// appleWhiteRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(15, 21))) {
+		else if (IsRadioButtonPressed(createRectangle(15, 21))) {
 			RadioButtonsFlags["appleWhiteRadioButton"] = true;
 			RadioButtonsFlags["appleBlackRadioButton"] = false;
 			RadioButtonsFlags["appleRedRadioButton"] = false;
@@ -153,7 +161,7 @@ int MainShopWindow::Update(){
 			appleColor = MyC::white;
 		}
 		// appleGrayRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(20, 21))) {
+		else if (IsRadioButtonPressed(createRectangle(20, 21))) {
 			RadioButtonsFlags["appleGrayRadioButton"] = true;
 			RadioButtonsFlags["appleWhiteRadioButton"] = false;
 			RadioButtonsFlags["appleBlackRadioButton"] = false;
@@ -162,7 +170,7 @@ int MainShopWindow::Update(){
 			appleColor = MyC::gray;
 		}
 		// appleDarkOliveRadioButton check
-		else if (CheckCollisionPointRec(GetMousePosition(), createRectangle(25, 21))) {
+		else if (IsRadioButtonPressed(createRectangle(25, 21))) {
 			RadioButtonsFlags["appleDarkOliveRadioButton"] = true;
 			RadioButtonsFlags["appleGrayRadioButton"] = false;
 			RadioButtonsFlags["appleWhiteRadioButton"] = false;
@@ -171,15 +179,6 @@ int MainShopWindow::Update(){
 			appleColor = MyC::darkOlive;
 		}
 	}
-
-	if (CheckCollisionPointRec(GetMousePosition(), back.button)) {
-		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-
-			gameState = GameStates::MENU;
-			return false;
-		}
-	}
-	return true;
 }
 
 void MainShopWindow::Draw(){
