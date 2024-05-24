@@ -4,6 +4,7 @@
 
 #include "Snake.h"
 #include "Food.h"
+#include "enums.h"
 #include <fstream>
 #include <iostream>
 #include <string>

@@ -25,9 +25,9 @@ public:
 	void Draw();
 
 	bool IsStartButtonPressed();
-	bool IsStartShopButtonPressed();
-	bool IsStartSettingsButtonPressed();
-	bool IsStartExitButtonPressed();
+	bool IsShopButtonPressed();
+	bool IsSettingsButtonPressed();
+	bool IsExitButtonPressed();
 };
 
 #endif // !MAIN_MENU_H

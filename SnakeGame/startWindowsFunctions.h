@@ -9,6 +9,7 @@
 #include "MainDifficultWindow.h"
 #include "MainShopWindow.h"
 #include "MainSettingsWindow.h"
+#include "MainGameOverMenu.h"
 
 void startTheMainLoop();
 
@@ -21,6 +22,8 @@ void startTheDifficultWindow();
 void startTheShopWindow();
 
 void startTheSettingsWindow();
+
+void startTheMainGameOverWindow();
 
 #endif // !START_WINDOWS_FUNCTIONS_H
 

@@ -2,6 +2,7 @@
 
 
 bool isAudioPlay = true;
+extern GameStates gameState;
 
 Game::Game(){
 	if (isAudioPlay) {
@@ -22,11 +23,10 @@ Game::~Game(){
 
 void Game::Draw(){
 	food.Draw();
-	snake.Draw();
+	snake.Draw();	
 }
 
 void Game::Update(){
-
 	if (running) {
 		snake.Update();
 		checkCollisionWithFood();
@@ -63,6 +63,7 @@ void Game::checkCollisionWithTail(){
 	headlessBody.pop_front();
 
 	if (elementInDeque(snake.body[0], headlessBody)) {
+		running = false;
 		GameOver();
 	}
 }
@@ -98,16 +99,16 @@ void Game::saveHighScore(){
 }
 
 void Game::GameOver(){
-	snake.Reset();
-	food.position = food.generateRandomPos(snake.body);
 	running = false;
+
+	//snake.Reset();
+	//food.position = food.generateRandomPos(snake.body);
 
 	if (score > highScore) {
 		highScore = score;
 		saveHighScore();
 	}
 	score = 0;
-
-	if(isAudioPlay)
+	if (isAudioPlay)
 		PlaySound(wallSound);
 }

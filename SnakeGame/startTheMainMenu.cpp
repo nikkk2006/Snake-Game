@@ -13,8 +13,8 @@ void startTheMainMenu(){
 	menu.Draw();
 
 	if (menu.IsStartButtonPressed()) {gameState = GameStates::START_DIFFICULT_WINDOW; }
-	else if (menu.IsStartShopButtonPressed()) { gameState = GameStates::SHOP; }
-	else if (menu.IsStartExitButtonPressed()) { gameState = GameStates::EXIT; }
-	else if (menu.IsStartSettingsButtonPressed()) { gameState = GameStates::SETTINGS; }	
+	else if (menu.IsShopButtonPressed()) { gameState = GameStates::SHOP; }
+	else if (menu.IsExitButtonPressed()) { gameState = GameStates::EXIT; }
+	else if (menu.IsSettingsButtonPressed()) { gameState = GameStates::SETTINGS; }	
 
 }

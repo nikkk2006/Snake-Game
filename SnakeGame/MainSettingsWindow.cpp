@@ -2,14 +2,12 @@
 
 
 extern bool isAudioPlay;
+bool defaultOnRadioButton = true;
 
 MainSettingsWindow::MainSettingsWindow() : 
     screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
-    screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
-    soundsOnRadioButton{ true },
-    soundsOffRadioButton{ false }
-{
-}
+    screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount)
+{}
 
 MainSettingsWindow::~MainSettingsWindow() {
     CloseWindow();
@@ -29,13 +27,11 @@ bool MainSettingsWindow::IsButtonBackPressed() {
 
 void MainSettingsWindow::Update() {
     if (IsOnRadioButtonPressed()) {
-        soundsOnRadioButton = true;
-        soundsOffRadioButton = false;
+        defaultOnRadioButton = true;
         isAudioPlay = true;
     }
     if (IsOffRadioButtonPressed()) {
-        soundsOffRadioButton = true;
-        soundsOnRadioButton = false;
+        defaultOnRadioButton = false;
         isAudioPlay = false;
     }
 }
@@ -54,8 +50,8 @@ static_cast<float>(screenHeight - 10) }, 4, MyC::textYellow);
     DrawText("Off", MyConstants::cellSize * 16.5, 420, 40, MyConstants::textWhite);
 
     // Drawing radio buttons for sounds(On, Off)
-    DrawRectangle(MyC::cellSize * 12, MyC::cellSize * 13, MyC::size, MyC::size, soundsOnRadioButton ? GREEN : BLACK);
-    DrawRectangle(MyC::cellSize * 17, MyC::cellSize * 13, MyC::size, MyC::size, soundsOffRadioButton ? GREEN : BLACK);
+    DrawRectangle(MyC::cellSize * 12, MyC::cellSize * 13, MyC::size, MyC::size, defaultOnRadioButton ? GREEN : BLACK);
+    DrawRectangle(MyC::cellSize * 17, MyC::cellSize * 13, MyC::size, MyC::size, defaultOnRadioButton ? BLACK : GREEN);
 
     // Drawing Buttons
     back.Draw();

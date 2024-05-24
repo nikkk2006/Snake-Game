@@ -1,19 +1,26 @@
 #include "startWindowsFunctions.h"
 
 
+extern GameStates gameState;
+
 void startTheMainWindow() {
 
 	mainWindow window = mainWindow();
 
-	while (WindowShouldClose() == false) {
-		BeginDrawing();
+	while (!WindowShouldClose() && window.game.running) {
 
-		// Updating
-		window.Update();
+		BeginDrawing();
 
 		// Drawing
 		window.Draw();
 
+		// Updating
+		window.Update();
+
+
 		EndDrawing();
+		gameState = GameStates::START_GAME_OVER_WINDOW;
 	}
+
+	
 }

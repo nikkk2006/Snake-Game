@@ -14,16 +14,14 @@ void Snake::Draw(){
 	}
 }
 
-void Snake::Update(){
-
+void Snake::Update() {
 	body.push_front(Vector2Add(body[0], direction));
-	if (addSegment) {		
-		addSegment = false;
-	}
-	else {
+	if (!addSegment) {
 		body.pop_back();
 	}
-
+	else {
+		addSegment = false;
+	}
 }
 
 void Snake::Reset(){

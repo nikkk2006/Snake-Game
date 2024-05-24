@@ -14,10 +14,6 @@ public:
 	int screenHeight;
 	const char* title;
 
-	// radiobuttons for sounds
-	bool soundsOnRadioButton;
-	bool soundsOffRadioButton;
-
 	// Buttons
 	buttonBack back;
 

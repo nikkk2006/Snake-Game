@@ -32,14 +32,14 @@ bool mainMenu::IsStartButtonPressed(){
 	return CheckCollisionPointRec(GetMousePosition(), buttonStart.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }
 
-bool mainMenu::IsStartShopButtonPressed(){
+bool mainMenu::IsShopButtonPressed(){
 	return CheckCollisionPointRec(GetMousePosition(), buttonShop.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }
 
-bool mainMenu::IsStartSettingsButtonPressed(){
+bool mainMenu::IsSettingsButtonPressed(){
 	return CheckCollisionPointRec(GetMousePosition(), buttonSettings.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }
 
-bool mainMenu::IsStartExitButtonPressed(){
+bool mainMenu::IsExitButtonPressed(){
 	return CheckCollisionPointRec(GetMousePosition(), buttonExit.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }

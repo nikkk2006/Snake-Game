@@ -13,6 +13,7 @@ void startTheMainLoop() {
 		switch (gameState) {
 		case static_cast<GameStates>(GameStates::MENU): startTheMainMenu(); break;
 		case static_cast<GameStates>(GameStates::START_DIFFICULT_WINDOW): startTheDifficultWindow(); break;
+		case static_cast<GameStates>(GameStates::START_GAME_OVER_WINDOW): startTheMainGameOverWindow(); break;
 		case static_cast<GameStates>(GameStates::START_THE_GAME): startTheMainWindow(); break;
 		case static_cast<GameStates>(GameStates::SHOP): startTheShopWindow(); break;
 		case static_cast<GameStates>(GameStates::SETTINGS): startTheSettingsWindow(); break;
