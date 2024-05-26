@@ -3,9 +3,7 @@
 
 int main() {
 
-	InitWindow(2 * MyC::offset + MyC::cellSize * MyC::cellCount,
-		2 * MyC::offset + MyC::cellSize * MyC::cellCount,
-		"SnakeGame");
+	InitWindow(2 * MyC::offset + MyC::cellSize * MyC::cellCount, 2 * MyC::offset + MyC::cellSize * MyC::cellCount, "SnakeGame");
 	SetTargetFPS(60);
 	startTheMainLoop();
 

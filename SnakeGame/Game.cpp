@@ -1,11 +1,11 @@
 #include "Game.h"
 
 
-bool isAudioPlay = true;
 extern GameStates gameState;
+extern bool defaultOnRadioButton;
 
 Game::Game(){
-	if (isAudioPlay) {
+	if (defaultOnRadioButton) {
 		InitAudioDevice();
 		eatSound = LoadSound("Sounds/eat.mp3");
 		wallSound = LoadSound("Sounds/wall.mp3");
@@ -14,7 +14,7 @@ Game::Game(){
 }
 
 Game::~Game(){
-	if (isAudioPlay) {
+	if (defaultOnRadioButton) {
 		UnloadSound(eatSound);
 		UnloadSound(wallSound);
 		CloseAudioDevice();
@@ -42,7 +42,7 @@ void Game::checkCollisionWithFood(){
 		snake.addSegment = true;
 		score++;
 
-		if(isAudioPlay)
+		if(defaultOnRadioButton)
 			PlaySound(eatSound);
 	}
 }
@@ -101,14 +101,11 @@ void Game::saveHighScore(){
 void Game::GameOver(){
 	running = false;
 
-	//snake.Reset();
-	//food.position = food.generateRandomPos(snake.body);
-
 	if (score > highScore) {
 		highScore = score;
 		saveHighScore();
 	}
 	score = 0;
-	if (isAudioPlay)
+	if (defaultOnRadioButton)
 		PlaySound(wallSound);
 }

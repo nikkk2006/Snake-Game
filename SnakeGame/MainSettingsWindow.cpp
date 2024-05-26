@@ -1,7 +1,6 @@
 #include "MainSettingsWindow.h"
 
 
-extern bool isAudioPlay;
 bool defaultOnRadioButton = true;
 
 MainSettingsWindow::MainSettingsWindow() : 
@@ -28,11 +27,11 @@ bool MainSettingsWindow::IsButtonBackPressed() {
 void MainSettingsWindow::Update() {
     if (IsOnRadioButtonPressed()) {
         defaultOnRadioButton = true;
-        isAudioPlay = true;
+        //isAudioPlay = true;
     }
     if (IsOffRadioButtonPressed()) {
         defaultOnRadioButton = false;
-        isAudioPlay = false;
+        //isAudioPlay = false;
     }
 }
 
