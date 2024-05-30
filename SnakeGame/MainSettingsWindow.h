@@ -16,12 +16,14 @@ public:
 
 	// Buttons
 	buttonBack back;
+	buttonControls controls;
 
 	MainSettingsWindow();
 	~MainSettingsWindow();
 	bool IsOnRadioButtonPressed();
 	bool IsOffRadioButtonPressed();
 	bool IsButtonBackPressed();
+	bool IsButtonControlsPressed();
 	void Draw();
 	void Update();
 };

@@ -10,6 +10,8 @@
 #include "MainShopWindow.h"
 #include "MainSettingsWindow.h"
 #include "MainGameOverMenu.h"
+#include "MainControlsWindow.h"
+#include "MainThemeWindow.h"
 
 void startTheMainLoop();
 
@@ -24,6 +26,10 @@ void startTheShopWindow();
 void startTheSettingsWindow();
 
 void startTheMainGameOverWindow();
+
+void startTheControlsWindow();
+
+void startTheThemeWindow();
 
 #endif // !START_WINDOWS_FUNCTIONS_H
 

@@ -34,3 +34,5 @@ buttonExit::buttonExit(const char* text, const float x, const float y, const flo
 buttonBack::buttonBack(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
 buttonStartTheMenu::buttonStartTheMenu(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
+
+buttonControls::buttonControls(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}

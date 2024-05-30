@@ -14,6 +14,9 @@ void startTheSettingsWindow() {
 		if (window.IsButtonBackPressed()) {
 			gameState = GameStates::MENU;
 		}
+		if (window.IsButtonControlsPressed()) {
+			gameState = GameStates::CONTROLS;
+		}
 
 		// Draw
 		BeginDrawing();

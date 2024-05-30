@@ -46,6 +46,11 @@ public:
 	buttonBack(const char* text = "back", const float x = 10.0, const float y = 25.0, const float width = 10.0, const float height = 3.0, const float textX = 115.0);
 };
 
+class buttonControls : public Button {
+public:
+	buttonControls(const char* text = "controls", const float x = 10.0, const float y = 20.0, const float width = 10.0, const float height = 3.0, const float textX = 85.0);
+};
+
 class buttonStartTheMenu : public Button {
 public:
 	buttonStartTheMenu(const char* text = "menu", const float x = 10.0, const float y = 12.0, const float width = 10, const float height = 3.0, const float textX = 110.0);

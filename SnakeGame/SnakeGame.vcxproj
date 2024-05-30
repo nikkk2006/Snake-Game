@@ -134,14 +134,17 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="generateRandomCell.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainControlsWindow.cpp" />
     <ClCompile Include="MainDifficultWindow.cpp" />
     <ClCompile Include="MainGameOverMenu.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MainMenuButtons.cpp" />
     <ClCompile Include="MainSettingsWindow.cpp" />
     <ClCompile Include="MainShopWindow.cpp" />
+    <ClCompile Include="MainThemeWindow.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="startTheControlsWindow.cpp" />
     <ClCompile Include="startTheDifficultWindow.cpp" />
     <ClCompile Include="startTheMainGaveOverWindow.cpp" />
     <ClCompile Include="startTheMainLoop.cpp" />
@@ -149,6 +152,7 @@
     <ClCompile Include="startTheMainWindow.cpp" />
     <ClCompile Include="startTheSettingsWindow.cpp" />
     <ClCompile Include="startTheShopWindow.cpp" />
+    <ClCompile Include="startTheThemeWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enums.h" />
@@ -157,12 +161,14 @@
     <ClInclude Include="functions.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="MainControlsWindow.h" />
     <ClInclude Include="MainDifficultWindow.h" />
     <ClInclude Include="MainGameOverMenu.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MainMenuButtons.h" />
     <ClInclude Include="MainSettingsWindow.h" />
     <ClInclude Include="MainShopWindow.h" />
+    <ClInclude Include="MainThemeWindow.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="snakeSpeed.h" />

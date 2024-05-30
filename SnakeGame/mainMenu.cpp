@@ -4,7 +4,8 @@
 mainMenu::mainMenu() :
 	screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
     screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount)
-{}
+{
+}
 
 mainMenu::~mainMenu(){
 	CloseWindow();

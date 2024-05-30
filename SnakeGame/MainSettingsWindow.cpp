@@ -24,14 +24,16 @@ bool MainSettingsWindow::IsButtonBackPressed() {
     return CheckCollisionPointRec(GetMousePosition(), back.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
 }
 
+bool MainSettingsWindow::IsButtonControlsPressed() {
+    return CheckCollisionPointRec(GetMousePosition(), controls.button) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
+
 void MainSettingsWindow::Update() {
     if (IsOnRadioButtonPressed()) {
         defaultOnRadioButton = true;
-        //isAudioPlay = true;
     }
     if (IsOffRadioButtonPressed()) {
         defaultOnRadioButton = false;
-        //isAudioPlay = false;
     }
 }
 
@@ -54,6 +56,7 @@ static_cast<float>(screenHeight - 10) }, 4, MyC::textYellow);
 
     // Drawing Buttons
     back.Draw();
+    controls.Draw();
 
     DrawText("Created by Nikitosik_2006", MyConstants::cellSize * 20, 850, 20, MyConstants::textWhite);
 }

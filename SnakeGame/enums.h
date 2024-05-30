@@ -10,6 +10,7 @@ enum class GameStates {
 	START_THE_GAME,
 	SHOP,
 	SETTINGS,
+	CONTROLS,
 	EXIT
 };
 

@@ -17,6 +17,7 @@ void startTheMainLoop() {
 		case static_cast<GameStates>(GameStates::START_THE_GAME): startTheMainWindow(); break;
 		case static_cast<GameStates>(GameStates::SHOP): startTheShopWindow(); break;
 		case static_cast<GameStates>(GameStates::SETTINGS): startTheSettingsWindow(); break;
+		case static_cast<GameStates>(GameStates::CONTROLS): startTheControlsWindow(); break;
 		case static_cast<GameStates>(GameStates::EXIT): flag = false; break;
 		}
 	}

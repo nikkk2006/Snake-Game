@@ -2,13 +2,11 @@
 #define MAIN_SHOP_WINDOW
 
 
-#include <map>
 #include <string>
 #include "constants.h"
 #include "difficultWindowButtons.h"
 #include "startWindowsFunctions.h"
 namespace MyC = MyConstants;
-using MyMapRB = std::map<std::string, bool>;
 
 
 class MainShopWindow {
@@ -19,27 +17,6 @@ public:
 
 	// Buttons
 	buttonBack back;
-
-	// Radio buttons pressed check
-	MyMapRB RadioButtonsFlags = {
-		{"snakeDarkGreenRadioButton", false},
-		{"snakeBlackRadioButton", false},
-		{"snakeWhiteRadioButton", true},
-		{"snakeGrayRadioButton", false},
-		{"snakeDarkOliveRadioButton", false},
-
-		{"fieldGreenRadioButton", false},
-		{"fieldBlackRadioButton", true},
-		{"fieldWhiteRadioButton", false},
-		{"fieldGrayRadioButton", false},
-		{"fieldOliveRadioButton", false},
-
-		{"appleRedRadioButton", true},
-		{"appleBlackRadioButton", false},
-		{"appleWhiteRadioButton", false},
-		{"appleGrayRadioButton", false},
-		{"appleDarkOliveRadioButton", false}
-	};
 
 	MainShopWindow();
 	~MainShopWindow();
