@@ -1,6 +1,8 @@
 #include "startWindowsFunctions.h"
 
 
+extern bool defaultWhiteTheme;
+
 float snakeSpeed = SnakeSpeed::EASY;
 extern GameStates gameState;
 
@@ -31,13 +33,13 @@ bool MainDifficultWindow::IsButtonBackPressed() {
 }
 
 void MainDifficultWindow::Draw(){
-	ClearBackground(MyConstants::black);
+	ClearBackground((defaultWhiteTheme == true) ? MyC::antiFlashWhite : MyC::black);
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, MyConstants::textYellow);
-	DrawText("choose the difficult", MyConstants::cellSize * 9, 10, 40, MyConstants::textYellow);
+static_cast<float>(screenHeight - 10) }, 4, defaultWhiteTheme ? MyC::frenchGray : MyC::textYellow);
+	DrawText("choose the difficult", MyConstants::cellSize * 9, 10, 40, defaultWhiteTheme ? MyC::frenchGray : MyC::textYellow);
 
 	easyDifficult.Draw();
 	mediumDifficult.Draw();

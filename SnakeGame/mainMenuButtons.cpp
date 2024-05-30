@@ -1,6 +1,8 @@
 #include "mainMenuButtons.h"
 
 
+extern bool defaultWhiteTheme;
+
 Button::Button(const char* text, const float x, const float y, const float width, const float height, const float textX) :
 	m_width(MyConstants::cellSize * width),
 	m_height(MyConstants::cellSize * height),
@@ -14,12 +16,12 @@ Button::Button(const char* text, const float x, const float y, const float width
 
 void Button::Draw() {
 	if (CheckCollisionPointRec(GetMousePosition(), button)) {
-		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonDarkBlack);
+		DrawRectangleRounded(button, 0.5, 6, defaultWhiteTheme ? MyC::slateGray : MyC::buttonDarkBlack);
 	}
 	else {
-		DrawRectangleRounded(button, 0.5, 6, MyConstants::buttonPressedColor);
+		DrawRectangleRounded(button, 0.5, 6, defaultWhiteTheme ? MyC::frenchGray : MyC::buttonPressedColor);
 	}
-	DrawText(m_text, button.x + m_textX, button.y + 30, 30, MyConstants::textWhite);
+	DrawText(m_text, button.x + m_textX, button.y + 30, 30, defaultWhiteTheme ? MyC::antiFlashWhite : MyConstants::textWhite);
 }
 
 
@@ -36,3 +38,5 @@ buttonBack::buttonBack(const char* text, const float x, const float y, const flo
 buttonStartTheMenu::buttonStartTheMenu(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
 
 buttonControls::buttonControls(const char* text, const float x, const float y, const float width, const float height, const float textX) : Button(text, x, y, width, height, textX) {}
+
+

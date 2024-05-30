@@ -24,6 +24,8 @@ namespace MyConstants {
 	const Color textYellow = { 226, 183, 20, 255 };
 	const Color textWhite = { 209, 208, 197, 255 };
 
+
+
 	// color for button
 	const Color buttonDarkBlack = { 44, 46, 49, 255 };
 	const Color buttonPressedColor = { 36, 36, 36, 255 };
@@ -32,8 +34,15 @@ namespace MyConstants {
 	const int cellCount = 25;
 	const int offset = 75;
 
-	//radiobutton size
+	// radiobutton size
 	const int size = 20;
+
+	// white theme colors
+	const Color antiFlashWhite = { 233, 236, 239, 255 };  // for filed
+	const Color frenchWhiteGray = {206, 212, 218, 255};   // for button
+	const Color frenchGray = {173, 181, 189, 255};        // for text
+	const Color slateGray = { 108, 117, 125, 255 };       // for pressed button
+
 }
 
 #endif // !CONSTANTS_H

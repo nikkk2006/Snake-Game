@@ -22,6 +22,8 @@ public:
 	~MainSettingsWindow();
 	bool IsOnRadioButtonPressed();
 	bool IsOffRadioButtonPressed();
+	bool IsDarkThemeRadioButtonPressed();
+	bool IsWhiteThemeRadioButtonPressed();
 	bool IsButtonBackPressed();
 	bool IsButtonControlsPressed();
 	void Draw();

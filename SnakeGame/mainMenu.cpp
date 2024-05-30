@@ -1,6 +1,8 @@
 #include "startWindowsFunctions.h"
 
 
+extern bool defaultWhiteTheme;
+
 mainMenu::mainMenu() :
 	screenWidth(2 * MyC::offset + MyC::cellSize * MyC::cellCount),
     screenHeight(2 * MyC::offset + MyC::cellSize * MyC::cellCount)
@@ -14,13 +16,14 @@ mainMenu::~mainMenu(){
 void mainMenu::Draw(){
 
 	BeginDrawing();
-	ClearBackground(MyC::black);
+	ClearBackground(defaultWhiteTheme ? MyC::antiFlashWhite : MyC::black);
+	
 
 	DrawRectangleLinesEx(Rectangle{ static_cast<float>(5),
 static_cast<float>(5),
 static_cast<float>(screenWidth - 10),
-static_cast<float>(screenHeight - 10) }, 4, MyC::textYellow);
-	DrawText("Snake Game", MyConstants::cellSize * 11, 10, 40, MyConstants::textYellow);
+static_cast<float>(screenHeight - 10) }, 4, defaultWhiteTheme ? MyC::frenchGray : MyC::textYellow);
+	DrawText("Snake Game", MyConstants::cellSize * 11, 10, 40, defaultWhiteTheme ? MyC::frenchGray : MyC::textYellow);
 	buttonStart.Draw();
 	buttonShop.Draw();
 	buttonSettings.Draw();

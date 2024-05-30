@@ -141,7 +141,6 @@
     <ClCompile Include="MainMenuButtons.cpp" />
     <ClCompile Include="MainSettingsWindow.cpp" />
     <ClCompile Include="MainShopWindow.cpp" />
-    <ClCompile Include="MainThemeWindow.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="startTheControlsWindow.cpp" />
@@ -152,7 +151,6 @@
     <ClCompile Include="startTheMainWindow.cpp" />
     <ClCompile Include="startTheSettingsWindow.cpp" />
     <ClCompile Include="startTheShopWindow.cpp" />
-    <ClCompile Include="startTheThemeWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enums.h" />
@@ -168,7 +166,6 @@
     <ClInclude Include="MainMenuButtons.h" />
     <ClInclude Include="MainSettingsWindow.h" />
     <ClInclude Include="MainShopWindow.h" />
-    <ClInclude Include="MainThemeWindow.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="snakeSpeed.h" />

@@ -48,7 +48,7 @@ public:
 
 class buttonControls : public Button {
 public:
-	buttonControls(const char* text = "controls", const float x = 10.0, const float y = 20.0, const float width = 10.0, const float height = 3.0, const float textX = 85.0);
+	buttonControls(const char* text = "controls", const float x = 10.0, const float y = 21.0, const float width = 10.0, const float height = 3.0, const float textX = 85.0);
 };
 
 class buttonStartTheMenu : public Button {
